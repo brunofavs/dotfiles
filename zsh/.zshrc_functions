@@ -1,0 +1,23 @@
+setup_fzf() {
+  # Example usage:
+  # setup_fzf     # Uses 'fd' (default)
+  # setup_fzf fd  # Uses 'fd' (default)
+  # setup_fzf rg  # Uses 'rg' (ripgrep)
+  local FD_CMD=${1:-fd}
+
+  # Export the FZF default command using the search command variable
+  export FZF_DEFAULT_COMMAND="$FD_CMD --hidden --strip-cwd-prefix --exclude .git"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND="$FD_CMD --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+  # Define the path generation function
+  _fzf_compgen_path() {
+    $FD_CMD --hidden --exclude .git . "$1"
+  }
+
+  # Define the directory completion function
+  _fzf_compgen_dir() {
+    $FD_CMD --type=d --hidden --exclude .git . "$1"
+  }
+}
+

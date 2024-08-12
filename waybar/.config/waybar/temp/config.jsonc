@@ -1,0 +1,65 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["custom/spotify"],
+    "modules-center": [],
+    "modules-right": ["bluetooth","pulseaudio", "cpu", "memory", "battery", "tray", "clock"],
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "bluetooth": {
+      // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+      "format": " {status}",
+      "format-on": "",
+      "format-off": "", 
+      "format-disabled": "", 
+      "format-connected": " {device_alias}",
+      "tooltip-format": "Battery {device_battery_percentage}%"
+      // "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      // "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    // "network": {
+    //     "format-wifi": "{essid} ({signalStrength}%) ",
+    //     "format-ethernet": "{ifname} ",
+    //     "format-disconnected": "Disconnected ⚠"
+    // },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} ",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}

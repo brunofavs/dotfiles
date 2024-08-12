@@ -1,0 +1,62 @@
+
+#----------------------
+#      Plugins
+#---------------------
+# Enabling fzf keybinds
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+# Different name in Ubuntu
+setup_fzf fdfind
+#----------------------
+#      Python
+#---------------------
+
+
+# Adding Script folder to path
+PATH=$PATH:"$HOME/.local/bin"
+
+export PATH
+#----------------------
+#      Alias
+#---------------------
+# Overriding cat because in apt the package has another name
+alias cat="batcat"
+alias nvim="~/Apps/nvim-ubuntu/squashfs-root/usr/bin/nvim"
+
+
+#----------------------
+#      ROS
+#---------------------
+
+source /opt/ros/noetic/setup.zsh
+
+#export ROS_HOSTNAME=192.168.187.144
+#export ROS_MASTER_URI=http://192.168.187.144:11311
+#export ROS_IP=192.168.187.2
+
+
+#----------------------
+#    ROS WORKSPACES
+#---------------------
+
+# Only one workspace can be active at a time
+
+# Mess arround workspace
+#source ~/catkin_ws/devel/setup.zsh
+# Atom workspace
+source $HOME/atom_ws/devel/setup.zsh
+
+#----------------------
+#    ATOM
+#---------------------
+
+#alias atom="cd $HOME/atom_ws/src/atom && source venv/bin/activate"
+alias atom="cd $HOME/atom_ws/src/atom"
+
+export GAZEBO_MODEL_PATH="`rospack find atom_worlds`/pattern/models:${GAZEBO_MODEL_PATH}"
+export GAZEBO_MODEL_PATH="`rospack find softbot_gazebo`/models:${GAZEBO_MODEL_PATH}"
+
+export TURTLEBOT3_MODEL=burger
+export TURTLEBOT3_MODEL=waffle
+export TURTLEBOT3_MODEL=waffle_pi
+
