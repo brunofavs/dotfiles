@@ -32,6 +32,7 @@
         "memory", 
         // "keyboard-state", 
         "battery", 
+        "power-profiles-daemon",
         "clock", 
         "tray",
         "custom/exit"
