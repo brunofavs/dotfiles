@@ -197,6 +197,11 @@ window#waybar.empty #window {
     margin: 10px 10px 10px 10px;
 }
 
+#custom-expand {
+    /* min-width: 25px; */
+    margin-right: 10px;
+}
+
 /* -----------------------------------------------------
  * Custom Exit
  * ----------------------------------------------------- */

@@ -17,6 +17,7 @@
     "modules-left": [
         "custom/appmenu",
         "group/quicklinks",
+        "group/minimized",
         "hyprland/window"
     ],
     "modules-center": [
@@ -34,7 +35,6 @@
         "battery", 
         "power-profiles-daemon",
         "clock", 
-        "tray",
         "custom/exit"
     ]
 }
