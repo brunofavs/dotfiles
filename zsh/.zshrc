@@ -31,8 +31,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Telling Hyprland which GPU to use
 # https://wiki.hyprland.org/Configuring/Multi-GPU/
-export AQ_DRM_DEVICES=/dev/dri/card0:/dev/dri/card1
-
+export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1"
+export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(copypath
@@ -45,7 +45,7 @@ git
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc_functions
 
-# Aliases
+# Aliasese
 
 alias ROS_classes="cd ~/catkin_ws/src/ROS_mess_arround"
 alias automec="cd ~/catkin_ws/src/AutoMec-AD/"
