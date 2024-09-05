@@ -1,0 +1,11 @@
+[Unit]
+Description=GIO mount smb share-name
+
+[Service]
+Type=oneshot
+ExecStart=/home/%u/Scripts/nas-mount.sh
+ExecStop=/home/%u/Scripts/nas-mount.sh -u
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target
