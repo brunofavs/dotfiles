@@ -14,6 +14,9 @@ fi
 # Adding Script folder to path
 PATH=$PATH:"$HOME/Scripts"
 
+#Necessary to run zoxide binary in ubuntu
+PATH=$PATH:"$HOME/.local/bin"
+
 export PATH
 
 #export VISUAL=vim
@@ -106,10 +109,10 @@ alias cat="bat"
 alias ls="eza --icons=always"
 
 
-if grep -q '^ID=arch' /etc/os-release; then
+# if grep -q '^ID=arch' /etc/os-release; then
   alias cd="z"
   eval "$(zoxide init zsh)"
-fi
+# fi
 
 #----------------------
 #      DISTROBOX
