@@ -53,7 +53,7 @@ alias c="clear"
 #Uninstalled rn
 #alias matlab="/usr/local/MATLAB/R2023b/bin/matlab"
 # alias open="xdg-open"
-alias open="dolphin"
+alias open="thunar"
 alias 5.1="cd $HOME/Documents/University/5.1"
 alias nvim_swap="cd ~/.local/state/nvim/swap/"
 alias vim="nvim"
