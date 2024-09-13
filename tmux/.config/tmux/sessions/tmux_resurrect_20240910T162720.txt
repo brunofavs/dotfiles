@@ -1,0 +1,20 @@
+pane	Corrected	1	0	:	1	123	:/home/bruno/datasets/zau	1	sh	:/bin/sh /usr/bin/distrobox-enter ubuntu
+pane	Corrected	2	0	:	1	brunofavs	:/home/bruno/datasets/zau	1	zsh	:
+pane	Corrected	3	0	:-	1	brunofavs	:/home/bruno/datasets/zau	1	zsh	:
+pane	Corrected	4	1	:*	1	brunofavs	:/home/bruno	1	zsh	:
+pane	Corrected Odometry	1	0	:	1	brunofavs	:/home/bruno/datasets/zau	1	zsh	:
+pane	Corrected Odometry	2	0	:	1	brunofavs	:/home/bruno/datasets/zau	1	zsh	:
+pane	Corrected Odometry	3	1	:*	1	brunofavs	:/home/bruno/datasets/zau	1	zsh	:
+pane	Corrected Odometry	4	0	:-	1	brunofavs	:/home/bruno/datasets/zau	1	zsh	:
+pane	coding	1	1	:*Z	1	brunofavs	:/home/bruno/atom_ws/src/atom	1	sh	:/bin/sh /usr/bin/distrobox enter ubuntu
+pane	coding	1	1	:*Z	2	brunofavs	:/home/bruno/atom_ws/src/atom	0	sh	:/bin/sh /usr/bin/distrobox-enter ubuntu
+window	Corrected	1	:Dataset_corrected 1 RGB	0	:	c63f,117x27,0,0,2	off
+window	Corrected	2	:Dataset_corrected 2 RGB	0	:	c642,117x27,0,0,5	off
+window	Corrected	3	:Dataset_corrected 3 RGB + Depth	0	:-	c643,117x27,0,0,6	off
+window	Corrected	4	:Dataset_corrrected 3 RGB + Depth + LiDAR	1	:*	c644,117x27,0,0,7	off
+window	Corrected Odometry	1	:1 RGB	0	:	c646,117x27,0,0,9	off
+window	Corrected Odometry	2	:2 RGB	0	:	634f,117x27,0,0,10	off
+window	Corrected Odometry	3	:3 RGB + Depth	1	:*	6350,117x27,0,0,11	off
+window	Corrected Odometry	4	:3 RGB + Depth + LiDAR	0	:-	6351,117x27,0,0,12	off
+window	coding	1	:sh	1	:*Z	6a27,117x27,0,0{58x27,0,0,3,58x27,59,0,4}	:
+state	Corrected	Corrected Odometry
