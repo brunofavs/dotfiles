@@ -22,6 +22,7 @@ export PATH
 #export VISUAL=vim
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export FILE_MANAGER="thunar"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -36,6 +37,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # https://wiki.hyprland.org/Configuring/Multi-GPU/
 export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1"
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
+export XDG_CURRENT_DESKTOP=gnome
+
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(copypath
@@ -55,13 +59,26 @@ alias automec="cd ~/catkin_ws/src/AutoMec-AD/"
 alias c="clear"
 #Uninstalled rn
 #alias matlab="/usr/local/MATLAB/R2023b/bin/matlab"
-# alias open="xdg-open"
-alias open="thunar"
 alias 5.1="cd $HOME/Documents/University/5.1"
 alias nvim_swap="cd ~/.local/state/nvim/swap/"
 alias vim="nvim"
 alias vi="nvim"
 alias thesis="$HOME/Tese/thesis_document/document/"
+
+alias ementas="docker run --ipc=host --network host --rm gribeiro00/ementas_ua:1.0 ementas"
+alias battery_status="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias buds_status="upower -i /org/freedesktop/UPower/devices/headset_dev_0C_8D_CA_5B_30_00"
+
+open() {
+    if [[ -z "$1" || "$1" == "." ]]; then
+      $FILE_MANAGER
+    else
+      for file in "$@"; do
+        echo "Opening $file"
+        xdg-open "$file" &>/dev/null & disown
+     done
+    fi
+}
 
 
 #----------------------

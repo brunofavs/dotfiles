@@ -21,3 +21,4 @@ return{ "chrisgrieser/nvim-spider",
         end
       }
 
+-- CamelCase

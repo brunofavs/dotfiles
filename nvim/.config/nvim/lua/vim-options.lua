@@ -18,11 +18,15 @@ vim.cmd("set relativenumber")
 vim.g.mapleader = " "
 --vim.cmd("set cmdheight=0")
 
--- Experimental
+-- expandtab converts tabs to spaces
+-- tabstop defines how many whitespaces a tab \t is 
+-- softtabstop defines how much \t a tab press is. With ts=2 and st=1, 2 Tab presses equal 1 \t, not very useful if expandtab is on.
+-- shitfwidth governs << and >> keybinds
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+
 vim.opt.scrolloff = 10
 vim.cmd("let g:python3_host_prog = '/usr/bin/python3'")
 -- Navigate vim panes better
@@ -31,13 +35,23 @@ vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
+-- In visual mode selects until end of line without \n
+vim.keymap.set('v', '$', '$h')
+
+
 -- Move selected lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 
+vim.opt.listchars = { eol = '⤶',
+                      space = '✚',
+                      -- Tabs are not set because of expand tab.
+                      tab = '◀-▶'
+                    }
+
 -- ººººººººººººººººººººººººººººººººººººººº
--- 		Auto commands
+--          Auto commands
 -- ººººººººººººººººººººººººººººººººººººººº
 
 local autocmd = vim.api.nvim_create_autocmd
@@ -45,7 +59,6 @@ local autocmd = vim.api.nvim_create_autocmd
 -- autocmd("VimEnter", {
 --   command = ":silent !kitty @ set-spacing padding=0 margin=0",
 -- })
-
 autocmd("VimLeavePre", {
   command = ":Neotree close",
   -- command = ":Neotree close | :Undotree hide",
@@ -59,5 +72,3 @@ autocmd("FileType", {
         vim.opt_local.linebreak = true
     end,
 })
-
-

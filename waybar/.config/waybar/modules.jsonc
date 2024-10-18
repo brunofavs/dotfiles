@@ -10,7 +10,8 @@
 {
     // Workspaces
     "hyprland/workspaces" : {
-        "on-click": "activate",
+        // "on-click": "hyprctl dispatch vdesk {name}",
+        "on-click": "",
         "active-only": false,
         "all-outputs": false,
         "format": "{}",

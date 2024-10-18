@@ -11,6 +11,9 @@ return {
     "tpope/vim-fugitive"
   },
   {
+    "sindrets/diffview.nvim"
+  },
+  {
     "9seconds/repolink.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim"

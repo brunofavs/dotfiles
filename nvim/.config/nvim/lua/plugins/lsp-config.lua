@@ -50,9 +50,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			--lspconfig.bashls.setup({})
-			--lspconfig.clangd.setup({})
-			--lspconfig.cmake.setup({})
+
 			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
@@ -60,7 +58,6 @@ return {
 			lspconfig.ltex.setup({
 				capabilities = capabilities,
 			})
-
 
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
@@ -79,12 +76,6 @@ return {
           )
         end,
 			})
-			--lspconfig.autotools_ls.setup({})
-			--lspconfig.markdown_oxide.setup({})
-			--lspconfig.ruff_lsp.setup({
-			--capabilities = capabilities
-			--})
-			--lspconfig.lemminx.setup({})
 			lspconfig.yamlls.setup({
 				capabilities = capabilities,
 			})
@@ -112,7 +103,15 @@ return {
 			-- 	end,
 			-- })
 
-
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = 'sh',
+        callback = function()
+          vim.lsp.start({
+            name = 'bash-language-server',
+            cmd = { 'bash-language-server', 'start' },
+          })
+        end,
+      })
 
 
 
