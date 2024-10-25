@@ -9,6 +9,7 @@ vim.cmd("set cmdheight=0")
 -- Moving half page down/up also centers cursor, to prevent having to search for the cursor
 vim.cmd("noremap <C-d> <C-d>zz ")
 vim.cmd("nnoremap <C-u> <C-u>zz")
+vim.cmd("vnoremap / <Esc>/\\%V")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 -- Moves to first non whitespace instead of beggining of line

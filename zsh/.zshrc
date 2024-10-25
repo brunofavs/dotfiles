@@ -71,7 +71,7 @@ alias buds_status="upower -i /org/freedesktop/UPower/devices/headset_dev_0C_8D_C
 
 open() {
     if [[ -z "$1" || "$1" == "." ]]; then
-      $FILE_MANAGER
+      $FILE_MANAGER &>/dev/null & disown
     else
       for file in "$@"; do
         echo "Opening $file"
@@ -143,3 +143,9 @@ fi
 
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/bruno/.dart-cli-completion/zsh-config.zsh ]] && . /home/bruno/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

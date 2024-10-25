@@ -1,3 +1,5 @@
+hyprctl dispatch focusmonitor
+
 matrix_size=3
 
 ##Utility functions
