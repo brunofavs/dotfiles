@@ -1,0 +1,9 @@
+[Unit]
+Description=Hyprpaper Wallpaper Randomizer
+
+[Service]
+Type=oneshot
+ExecStart=/home/%u/.config/hypr/scripts/wallpaper_randomizer.sh
+
+[Install]
+WantedBy=default.target
