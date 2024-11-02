@@ -1,5 +1,6 @@
 [Unit]
 Description=Hyprpaper Wallpaper Randomizer
+Requires=xdg-desktop-autostart.target
 
 [Service]
 Type=oneshot
