@@ -9,9 +9,9 @@
     g-padding: 8px;
 
     hl-color: rgba (255,255,255,80%);
-    hlt-color: #888888FF;
-    alt-color: rgba (0,0,0,15%);
-    wbg-color: rgba (0,0,0,20%);
+    hlt-color: rgba (0,0,0,100%);
+    alt-color: rgba (0,0,0,25%);
+    wbg-color: rgba (0,0,0,40%);
     w-border: 2px solid;
     w-border-color: #FFFFFFFF;
     w-padding: 12px;
