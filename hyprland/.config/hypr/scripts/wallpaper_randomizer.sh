@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Wallpaper randomizer started"
+
 WALLPAPERS_PATH="$HOME/Pictures/Wallpapers/Minimalist"
 HYPRLOCK_CONF="$HOME/.config/hypr/hyprlock.conf"
 
@@ -15,6 +17,8 @@ while true; do
 
   NEW_WALLPAPER="$WALLPAPERS_PATH/$CHOICE"
 
+  sleep 1200
+
   hyprctl hyprpaper unload all
   hyprctl hyprpaper preload   "$NEW_WALLPAPER"
   hyprctl hyprpaper wallpaper ",$NEW_WALLPAPER"
@@ -23,7 +27,6 @@ while true; do
 
   sed -i -r "s/[^\/]*\.(jpg|png)/$CHOICE/g" "$HYPRLOCK_CONF"
 
-  sleep 1200
 
 done
 
