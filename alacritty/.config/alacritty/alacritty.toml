@@ -9,7 +9,7 @@ padding.y = 10
 decorations = "none"
 
 opacity = 0.7
-blur = true
+# blur = true
 
 
 [font]
@@ -25,7 +25,20 @@ bindings = [
 
 [general]
 import = [
-"~/.config/alacritty/themes/themes/coolnight.toml"
+# "~/.config/alacritty/themes/themes/coolnight.toml"
+"~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
+# "~/.config/alacritty/themes/themes/catppuccin.toml"
+# "~/.config/alacritty/themes/themes/dracula.toml"
+# "~/.config/alacritty/themes/themes/github_dark.toml"
+# "~/.config/alacritty/themes/themes/inferno.toml"
+# "~/.config/alacritty/themes/themes/iris.toml"
+# "~/.config/alacritty/themes/themes/Mariana.toml"
+# "~/.config/alacritty/themes/themes/monokai_charcoal.toml"
+# "~/.config/alacritty/themes/themes/monokai_pro.toml"
+# "~/.config/alacritty/themes/themes/monokai.toml"
+# "~/.config/alacritty/themes/themes/moonlight_ii_vscode.toml"
+# "~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
+#
 ]
 
 
