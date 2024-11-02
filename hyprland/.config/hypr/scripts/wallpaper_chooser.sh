@@ -26,5 +26,7 @@ hyprctl hyprpaper unload all
 hyprctl hyprpaper preload   "$SELECTED_WALLPAPER"
 hyprctl hyprpaper wallpaper ",$SELECTED_WALLPAPER"
 
+wal -i "$SELECTED_WALLPAPER"
+
 sed -i -r "s/[^\/]*\.(jpg|png)/$CHOICE/g" "$HYPRLOCK_CONF"
 

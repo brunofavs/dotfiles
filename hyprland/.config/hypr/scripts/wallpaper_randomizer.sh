@@ -19,6 +19,8 @@ while true; do
   hyprctl hyprpaper preload   "$NEW_WALLPAPER"
   hyprctl hyprpaper wallpaper ",$NEW_WALLPAPER"
 
+  wal -i "$NEW_WALLPAPER"
+
   sed -i -r "s/[^\/]*\.(jpg|png)/$CHOICE/g" "$HYPRLOCK_CONF"
 
   sleep 1200
