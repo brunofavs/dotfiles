@@ -5,7 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-(cat ~/.cache/wal/sequences &)
+# Including the .conf file directly in kitty. This method has lag
+# (cat ~/.cache/wal/sequences &)
 
 # --------------------
 # Environment Variables
