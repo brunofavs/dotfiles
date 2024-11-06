@@ -24,6 +24,7 @@ configuration {
     display-drun: "";
 }
 
+
 listview {
     columns: 1;
     lines: 7;

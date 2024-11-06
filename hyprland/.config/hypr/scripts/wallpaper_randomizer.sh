@@ -13,7 +13,7 @@ fi
 
 while true; do
 
-  CHOICE=$(ls "$WALLPAPERS_PATH" | grep -E ".png|.jpg" | shuf -n 1)
+  CHOICE=$(ls "$WALLPAPERS_PATH" | grep -E ".png|.jpg|.jpeg" | shuf -n 1)
 
   NEW_WALLPAPER="$WALLPAPERS_PATH/$CHOICE"
 
@@ -25,7 +25,7 @@ while true; do
 
   wal -i "$NEW_WALLPAPER"
 
-  sed -i -r "s/[^\/]*\.(jpg|png)/$CHOICE/g" "$HYPRLOCK_CONF"
+  sed -i -r "s/[^\/]*\.(jpg|png|jpeg)/$CHOICE/g" "$HYPRLOCK_CONF"
 
 
 done

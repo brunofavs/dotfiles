@@ -10,7 +10,7 @@ if [ ! -d "$WALLPAPERS_PATH" ]; then
 fi
 
 # Get a list of files in WALLPAPER_PATH and display them in a rofi menu
-CHOICE=$(ls "$WALLPAPERS_PATH" | grep -E ".png|.jpg" | rofi -dmenu -i -p "Select a wallpaper:")
+CHOICE=$(ls "$WALLPAPERS_PATH" | grep -E ".png|.jpg|.jpeg" | rofi -dmenu -i -p "Select a wallpaper:")
 
 # Exit if no choice was made
 if [ -z "$CHOICE" ]; then
@@ -28,5 +28,5 @@ hyprctl hyprpaper wallpaper ",$SELECTED_WALLPAPER"
 
 wal -i "$SELECTED_WALLPAPER"
 
-sed -i -r "s/[^\/]*\.(jpg|png)/$CHOICE/g" "$HYPRLOCK_CONF"
+sed -i -r "s/[^\/]*\.(jpg|png|jpeg)/$CHOICE/g" "$HYPRLOCK_CONF"
 
