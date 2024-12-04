@@ -2,6 +2,8 @@
 -- 		Vim Commands
 -- ººººººººººººººººººººººººººººººººººººººº
 
+vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+
 vim.cmd("set cmdheight=0")
 
 -- Deleting goes into a trash registry, to not interfere with yanking registry
