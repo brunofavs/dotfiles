@@ -152,8 +152,8 @@ alias ls="eza --icons=always"
 
 
 # if grep -q '^ID=arch' /etc/os-release; then
-  alias cd="z"
-  eval "$(zoxide init zsh)"
+  # alias cd="z"
+  eval "$(zoxide init --cmd cd zsh)"
 # fi
 
 #----------------------
