@@ -72,6 +72,10 @@ alias ementas="docker run --ipc=host --network host --rm gribeiro00/ementas_ua:1
 alias battery_status="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias buds_status="upower -i /org/freedesktop/UPower/devices/headset_dev_0C_8D_CA_5B_30_00"
 
+#------------------------
+#  Functions 
+#------------------------
+
 open() {
     if [[ -z "$1" || "$1" == "." ]]; then
       $FILE_MANAGER &>/dev/null & disown
@@ -83,6 +87,24 @@ open() {
     fi
 }
 
+test-microphone() {
+    arecord -vvv -f dat /dev/null
+}
+
+remove-whitespaces(){
+  for x in *" "*; do
+    mv -- "$x" "${x// /_}"
+  done
+}
+
+
+#------------------------
+#  Virtualenvwrapper 
+#------------------------
+#
+export WORKON_HOME=$HOME/.virtualenvs
+# source /usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper_lazy.sh
 
 #----------------------
 #      ROS

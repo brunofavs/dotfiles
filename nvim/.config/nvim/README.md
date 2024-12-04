@@ -1,2 +1,2 @@
 # nvim
-Repository for my own costum nvim config
+Repository for my own custom nvim config

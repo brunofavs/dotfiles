@@ -10,7 +10,7 @@ return {
         -- English writting
         -- null_ls.builtins.diagnostics.proselint,
         -- null_ls.builtins.code_actions.proselint,
-        null_ls.builtins.diagnostics.write_good,
+        -- null_ls.builtins.diagnostics.write_good,
 
 				-- Python
 				null_ls.builtins.formatting.black,

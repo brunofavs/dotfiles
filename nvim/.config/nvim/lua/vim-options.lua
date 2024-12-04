@@ -65,11 +65,26 @@ autocmd("VimLeavePre", {
   -- command = ":Neotree close | :Undotree hide",
 })
 
+-- autocmd("FileType", {
+--     pattern = {"tex","txt","markdown"},
+--     callback = function()
+--         -- vim.opt_local.textwidth = 110
+--         vim.opt_local.textwidth = 140
+--         vim.opt_local.wrap = true
+--         vim.opt_local.linebreak = true
+--         vim.opt_local.formatoptions:append("ta")
+--     end,
+-- })
+--
 autocmd("FileType", {
-    pattern = {"tex","txt"},
+    pattern = {"tex", "txt", "markdown"},
     callback = function()
-        vim.opt_local.textwidth = 110
+        -- Calculate 80% of the current window width
+        local winwidth = vim.api.nvim_win_get_width(0)
+        vim.opt_local.textwidth = math.floor(winwidth * 0.9)  -- Set to 80% of the window width
         vim.opt_local.wrap = true
         vim.opt_local.linebreak = true
+        -- vim.opt_local.formatoptions:append("t")
     end,
 })
+
