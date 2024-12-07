@@ -42,6 +42,13 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('v', '$', '$h')
 
 
+vim.keymap.set('n', '<S-Up>', '<Up>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-Down>', '<Down>', { noremap = true, silent = true })
+vim.keymap.set('i', '<S-Up>', '<Up>', { noremap = true, silent = true })
+vim.keymap.set('i', '<S-Down>', '<Down>', { noremap = true, silent = true })
+vim.keymap.set('v', '<S-Up>', '<Up>', { noremap = true, silent = true })
+vim.keymap.set('v', '<S-Down>', '<Down>', { noremap = true, silent = true })
+
 -- Move selected lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
