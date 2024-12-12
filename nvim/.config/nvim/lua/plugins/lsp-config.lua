@@ -90,6 +90,18 @@ return {
 				capabilities = capabilities,
 			})
 
+      lspconfig.dockerls.setup {
+          settings = {
+            docker = {
+              languageserver = {
+                formatter = {
+                  ignoreMultilineInstructions = true,
+                },
+              },
+            }
+          }
+      }
+
 			--Not supported in Pyright
 			--vim.keymap.set('n','<leader>gi',vim.lsp.buf.implementation,{})
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { noremap = true })

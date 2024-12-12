@@ -20,6 +20,8 @@ PATH=$PATH:"$HOME/Scripts"
 #Necessary to run zoxide binary in ubuntu
 PATH=$PATH:"$HOME/.local/bin"
 
+setopt extendedglob
+
 export PATH
 
 #export VISUAL=vim
