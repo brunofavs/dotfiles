@@ -22,7 +22,9 @@ export PATH
 #---------------------
 # Overriding cat because in apt the package has another name
 alias cat="batcat"
-alias nvim="~/Apps/nvim-ubuntu/squashfs-root/usr/bin/nvim"
+
+# Symbolic link from there to /bin instead
+# alias nvim="~/Apps/nvim-ubuntu/squashfs-root/usr/bin/nvim"
 
 
 #----------------------

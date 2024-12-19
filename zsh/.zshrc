@@ -164,8 +164,13 @@ alias ls="eza --icons=always"
 # Fix big processes crashing container
 ulimit -Hn 524288
 
-if [ "$(lsb_release -ds)" = "Ubuntu 20.04.6 LTS" ]; then
+# if [ "$(lsb_release -ds)" = "Ubuntu 20.04.6 LTS" ]; then
+#     source ~/.zshrc_ubuntu
+# fi
+
+if [ "$CONTAINER_ID" = "ubuntu" ]; then
     source ~/.zshrc_ubuntu
+    echo "Sourced dsitro"
 fi
 
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
