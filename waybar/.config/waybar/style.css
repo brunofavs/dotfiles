@@ -25,7 +25,11 @@
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /* Like this is changes the font for everything wtf */
+    /* font-family:  "Font Awesome 6 Free Solid","Fira Sans Semibold", Roboto, Helvetica, Arial, sans-serif; */
+
+    /* ttf-ms-win11 messes my fonts */
+    font-family:  FontAwesome,"Fira Sans Semibold", Roboto, Helvetica, Arial, sans-serif;
     border: none;
     border-radius: 0px;
 }

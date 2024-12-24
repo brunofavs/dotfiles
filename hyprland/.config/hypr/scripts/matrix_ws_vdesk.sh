@@ -48,5 +48,5 @@ esac
 echo "$row : $col"
 ws=$(($row * matrix_size + $col + 1))
 echo $ws
-hyprctl dispatch workspace $ws
-# hyprctl dispatch vdesk $ws
+# hyprctl dispatch workspace $ws
+hyprctl dispatch vdesk $ws
