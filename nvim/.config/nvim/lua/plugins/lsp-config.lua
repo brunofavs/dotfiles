@@ -66,13 +66,13 @@ return {
           capabilities = capabilities, -- Include capabilities if needed for additional functionality
           settings = {
                 ltex = {
-                    language = "en", -- Set the language to English
                     additionalRules = {
                         languageModel = "~/.config/nvim/ngrams_ltex/", -- Specify the path to the language model
                     },
                 },
           },
       })
+
 
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
