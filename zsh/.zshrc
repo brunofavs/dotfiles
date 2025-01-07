@@ -99,6 +99,10 @@ remove-whitespaces(){
   done
 }
 
+nvim() {
+    neovide "$@" & disown
+}
+
 
 #------------------------
 #  Virtualenvwrapper 
