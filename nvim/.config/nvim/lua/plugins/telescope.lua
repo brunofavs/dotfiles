@@ -31,6 +31,7 @@ return {
       defaults = {
         -- `hidden = true` is not supported in text grep commands.
         vimgrep_arguments = vimgrep_arguments,
+        winblend = 0
       },
       pickers = {
         find_files = {
@@ -41,7 +42,6 @@ return {
     })
 
     -- Show hidden files excluding .git (END)
-
 
     end
     },
