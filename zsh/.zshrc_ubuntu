@@ -41,6 +41,7 @@ source /opt/ros/noetic/setup.zsh
 # Local Machine Config
 export ROS_HOSTNAME=localhost
 export ROS_MASTER_URI=http://localhost:11311
+export ROS_WS="$HOME/ros_ws"
 
 #----------------------
 #    ROS WORKSPACES
@@ -50,15 +51,17 @@ export ROS_MASTER_URI=http://localhost:11311
 
 # Mess arround workspace
 #source ~/catkin_ws/devel/setup.zsh
+# # Atom workspace
+# source $ROS_WS/atom_ws/devel/setup.zsh
 # Atom workspace
-source $HOME/atom_ws/devel/setup.zsh
+source $ROS_WS/atom_ttc_ws/devel/setup.zsh
 
 #----------------------
 #    ATOM
 #---------------------
 
 #alias atom="cd $HOME/atom_ws/src/atom && source venv/bin/activate"
-alias atom="cd $HOME/atom_ws/src/atom"
+alias atom="cd $ROS_WS/atom_ws/src/atom"
 
 export GAZEBO_MODEL_PATH="`rospack find atom_worlds`/pattern/models:${GAZEBO_MODEL_PATH}"
 export GAZEBO_MODEL_PATH="`rospack find softbot_gazebo`/models:${GAZEBO_MODEL_PATH}"
