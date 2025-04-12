@@ -95,7 +95,28 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
-				capabilities = capabilities,
+          capabilities = capabilities,
+          settings = {
+              python = {
+                analysis = {
+                  typeCheckingMode = "standard",
+
+                  diagnosticSeverityOverrides = {
+                      -- strictListInference = "warning",
+                      -- strictDictionaryInference = "warning",
+                      -- strictSetInference = "warning",
+                      reportPossiblyUnboundVariable = "none"
+                  },
+
+                    extraPaths = {
+                      "/home/bruno/ros_ws/atom_ttc_ws/src/atom_annotation_ML/atom_core/src",
+                      "/home/bruno/ros_ws/atom_ttc_ws/src/atom_annotation_ML/atom_evaluation/src",
+                      "/home/bruno/ros_ws/atom_ttc_ws/src/atom_annotation_ML/atom_calibration/src",
+                      "/home/bruno/ros_ws/atom_ttc_ws/src/atom_annotation_ML/atom_msgs/src",
+                    }
+                }
+              }
+          }
 			})
 
       lspconfig.dockerls.setup {

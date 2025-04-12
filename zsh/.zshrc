@@ -100,7 +100,7 @@ remove-whitespaces(){
 }
 
 nvim() {
-    neovide "$@" & disown
+    neovide --neovim-bin ~/Apps/nvim10.4/bin/nvim "$@" & disown
 }
 
 

@@ -52,9 +52,9 @@ export ROS_WS="$HOME/ros_ws"
 # Mess arround workspace
 #source ~/catkin_ws/devel/setup.zsh
 # # Atom workspace
-# source $ROS_WS/atom_ws/devel/setup.zsh
+source $ROS_WS/atom_ws/devel/setup.zsh
 # Atom workspace
-source $ROS_WS/atom_ttc_ws/devel/setup.zsh
+# source $ROS_WS/atom_ttc_ws/devel/setup.zsh
 
 #----------------------
 #    ATOM
