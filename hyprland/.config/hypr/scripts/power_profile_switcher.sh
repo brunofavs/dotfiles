@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Get the current power profile
 current_profile=$(powerprofilesctl get)
 
