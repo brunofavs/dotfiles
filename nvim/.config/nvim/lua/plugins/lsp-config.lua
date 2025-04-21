@@ -11,16 +11,16 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"bashls",
+					-- "bashls",
 					"clangd",
 					"cmake",
-					"jsonls",
+					-- "jsonls",
 					"ltex",
 					"autotools_ls",
 					"markdown_oxide",
-					"pyright",
+					-- "pyright",
 					"lemminx",
-					"yamlls",
+					-- "yamlls",
 				},
 			})
 		end,

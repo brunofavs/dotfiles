@@ -42,7 +42,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # https://wiki.hyprland.org/Configuring/Multi-GPU/
 export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1"
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
-export XDG_CURRENT_DESKTOP=gnome
+# export XDG_CURRENT_DESKTOP=gnome
 
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -101,6 +101,7 @@ remove-whitespaces(){
 
 nvim() {
     neovide --neovim-bin ~/Apps/nvim10.4/bin/nvim "$@" & disown
+    # neovide "$@" & disown
 }
 
 
