@@ -21,9 +21,35 @@ if vim.g.neovide then
   -- vim.g.neovide_cursor_animate_command_line = false
   -- vim.g.neovide_scroll_animation_far_lines = 0
   -- vim.g.neovide_scroll_animation_length = 0.00
+  --
+  --
+  vim.keymap.set({ "n", "v" }, "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
+  vim.keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
+  vim.keymap.set({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
 
+  -- Clipboard
+  -- Works
+  -- Insert mode: Paste from clipboard (before cursor, resume insert)
+  vim.keymap.set('i', '<sc-v>', '<ESC>"+pa', { noremap = true })
+
+  -- Visual mode: Copy to system clipboard
+  -- Works
+  vim.keymap.set('v', '<sc-c>', '"+y', { noremap = true })
+
+  -- Normal mode: Paste from clipboard (after moving cursor right)
+  -- Works
+  vim.keymap.set('n', '<sc-v>', '"+p', { noremap = true })
+
+  -- Visual mode: Paste over selection from system clipboard
+  -- Works
+  vim.keymap.set('v', '<sc-v>', '"+p', { noremap = true })
 
 end
+
+
+
+
+--
 -- ººººººººººººººººººººººººººººººººººººººº
 -- 		Vim Commands
 -- ººººººººººººººººººººººººººººººººººººººº
