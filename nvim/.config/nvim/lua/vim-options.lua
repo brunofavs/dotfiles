@@ -111,6 +111,8 @@ vim.opt.listchars = { eol = '⤶',
                       -- Tabs are not set because of expand tab.
                       tab = '◀-▶'
                     }
+-- Line breaks at word boundaries instead of letters
+vim.opt_local.linebreak = true
 
 -- ººººººººººººººººººººººººººººººººººººººº
 --          Auto commands
@@ -148,5 +150,6 @@ autocmd("FileType", {
         -- vim.opt_local.formatoptions:append("t")
     end,
 })
+
 
 
