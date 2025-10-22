@@ -5,7 +5,6 @@
 
 if vim.g.neovide then
   -- Neovide 0.15 upwards
-  -- vim.g.neovide_opacity = 0.6
   vim.g.neovide_opacity = 0.6
   vim.g.neovide_scale_factor = 1.1
   vim.g.neovide_refresh_rate = 144

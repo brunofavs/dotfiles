@@ -42,6 +42,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # https://wiki.hyprland.org/Configuring/Multi-GPU/
 export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1"
 export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
+# export HYPRSHOT_DIR="$HOME/Videos/Prediction\ and\ Control\ with\ Function\ Approximation"
 # export XDG_CURRENT_DESKTOP=gnome
 
 
@@ -186,3 +187,10 @@ fi
 [[ -f /home/bruno/.dart-cli-completion/zsh-config.zsh ]] && . /home/bruno/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+#----------------------
+#      Ruby
+#---------------------
+#
+export GEM_HOME="$(gem env user_gemhome)"
+export PATH="$PATH:$GEM_HOME/bin"
