@@ -139,7 +139,7 @@ autocmd("VimLeavePre", {
 -- })
 --
 autocmd("FileType", {
-    pattern = {"tex", "txt", "markdown"},
+    pattern = {"tex", "txt", "markdown","md"},
     callback = function()
         -- Calculate 80% of the current window width
         local winwidth = vim.api.nvim_win_get_width(0)

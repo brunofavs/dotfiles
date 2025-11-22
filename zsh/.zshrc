@@ -67,8 +67,10 @@ alias c="clear"
 #alias matlab="/usr/local/MATLAB/R2023b/bin/matlab"
 alias 5.1="cd $HOME/Documents/University/5.1"
 alias nvim_swap="cd ~/.local/state/nvim/swap/"
-alias vim="nvim"
-alias vi="nvim"
+# alias vim="nvim"
+# alias vi="nvim"
+alias vi="neovide & disown"
+alias vim="neovide & disown"
 alias thesis="$HOME/Tese/thesis_document/document/"
 
 alias ementas="docker run --ipc=host --network host --rm gribeiro00/ementas_ua:1.0 ementas"
@@ -100,10 +102,10 @@ remove-whitespaces(){
   done
 }
 
-nvim() {
-    neovide --neovim-bin ~/Apps/nvim10.4/bin/nvim "$@" & disown
-    # neovide "$@" & disown
-}
+# nvim() {
+#     neovide --neovim-bin ~/Apps/nvim10.4/bin/nvim "$@" & disown
+#     # neovide "$@" & disown
+# }
 
 
 #------------------------
