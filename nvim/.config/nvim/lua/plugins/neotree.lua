@@ -6,7 +6,8 @@ return{
 	      "nvim-tree/nvim-web-devicons",
 	      "MunifTanjim/nui.nvim",},
 	config = function()
-		vim.keymap.set('n','<C-b>', '<Cmd>:Neotree toggle<CR>',{})
+		vim.keymap.set('n','<C-b>', '<Cmd>Neotree toggle<CR>',{})
+
 
     require('neo-tree').setup {
       filesystem = {
@@ -18,7 +19,14 @@ return{
 	          '.git',
 	        },
         }
-      }
+      },
+      window = {
+          mappings = {
+          -- This shit was overwrittig my bind
+          --https://github.com/nvim-neo-tree/neo-tree.nvim/blob/a981ef287503c668434bffa78071d5b9ff92c12f/lua/neo-tree/defaults.lua#L427
+            ["<C-b>"] = "toggle" -- or "close_window"
+          },
+      },
     }
 
 	end

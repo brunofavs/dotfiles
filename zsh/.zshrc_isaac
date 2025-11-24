@@ -1,0 +1,11 @@
+
+
+# Hide egl: failed to create dri2 screen that shows when launching neovide in distrobox
+export EGL_LOG_LEVEL=fatal
+
+
+export PYENV_ROOT="$HOME/.pyenv_isaac"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+eval "$(pyenv virtualenv-init -)"

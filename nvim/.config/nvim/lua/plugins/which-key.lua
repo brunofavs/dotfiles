@@ -9,14 +9,14 @@ return{
   config = function ()
     local wk = require("which-key")
     wk.setup(
-    wk.register({
-      ["<leader>"] = {
-        s = {
-          --name = "harpoon",
-          b = {"Show buffers" },
-        },
-      },
-    })
+    -- wk.register({
+    --   ["<leader>"] = {
+    --     s = {
+    --       --name = "harpoon",
+    --       b = {"Show buffers" },
+    --     },
+    --   },
+    -- })
     )
   end
 }

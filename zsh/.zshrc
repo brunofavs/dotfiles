@@ -20,6 +20,8 @@ PATH=$PATH:"$HOME/Scripts"
 #Necessary to run zoxide binary in ubuntu
 PATH=$PATH:"$HOME/.local/bin"
 
+PATH="${HOME}/.cargo/bin:${PATH}"
+
 setopt extendedglob
 
 export PATH
@@ -28,6 +30,7 @@ export PATH
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export FILE_MANAGER="thunar"
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -67,10 +70,8 @@ alias c="clear"
 #alias matlab="/usr/local/MATLAB/R2023b/bin/matlab"
 alias 5.1="cd $HOME/Documents/University/5.1"
 alias nvim_swap="cd ~/.local/state/nvim/swap/"
-# alias vim="nvim"
-# alias vi="nvim"
-alias vi="neovide & disown"
-alias vim="neovide & disown"
+alias vim="nvim"
+alias vi="nvim"
 alias thesis="$HOME/Tese/thesis_document/document/"
 
 alias ementas="docker run --ipc=host --network host --rm gribeiro00/ementas_ua:1.0 ementas"
@@ -102,27 +103,32 @@ remove-whitespaces(){
   done
 }
 
-# nvim() {
+nvim() {
 #     neovide --neovim-bin ~/Apps/nvim10.4/bin/nvim "$@" & disown
-#     # neovide "$@" & disown
-# }
+    neovide "$@" & disown
+}
 
 
 #------------------------
-#  Virtualenvwrapper 
+#  Virtualenvwrapper  && Others
 #------------------------
 #
-export WORKON_HOME=$HOME/.virtualenvs
-# source /usr/bin/virtualenvwrapper.sh
-source /usr/bin/virtualenvwrapper_lazy.sh
 
-#----------------------
-#      ROS
-#---------------------
 
-#----------------------
-#    ROS WORKSPACES
-#---------------------
+if [ -z "$CONTAINER_ID" ]; then
+    # echo "Running on host (CONTAINER_ID undefined)"
+    #
+    export WORKON_HOME=$HOME/.virtualenvs
+    # source /usr/bin/virtualenvwrapper.sh
+    source /usr/bin/virtualenvwrapper_lazy.sh
+
+
+    export PYENV_ROOT="$HOME/.pyenv"
+    [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init - zsh)"
+
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 #----------------------
 #    ATOM
@@ -181,6 +187,11 @@ if [ "$CONTAINER_ID" = "ubuntu" ]; then
     echo "Sourced dsitro"
 fi
 
+if [ "$CONTAINER_ID" = "isaac" ]; then
+    source ~/.zshrc_isaac
+    echo "Sourced distro"
+fi
+
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -196,3 +207,6 @@ fi
 #
 export GEM_HOME="$(gem env user_gemhome)"
 export PATH="$PATH:$GEM_HOME/bin"
+
+
+

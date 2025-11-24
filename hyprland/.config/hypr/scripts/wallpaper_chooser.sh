@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 WALLPAPERS_PATH="$HOME/Pictures/Wallpapers/Minimalist"
 HYPRLOCK_CONF="$HOME/.config/hypr/hyprlock.conf"
 

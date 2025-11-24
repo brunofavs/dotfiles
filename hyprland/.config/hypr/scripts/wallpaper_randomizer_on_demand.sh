@@ -12,6 +12,7 @@ if [ ! -d "$WALLPAPERS_PATH" ]; then
 fi
 
 
+
 CHOICE=$(ls "$WALLPAPERS_PATH" | grep -E ".png|.jpg|.jpeg" | shuf -n 1)
 
 NEW_WALLPAPER="$WALLPAPERS_PATH/$CHOICE"
