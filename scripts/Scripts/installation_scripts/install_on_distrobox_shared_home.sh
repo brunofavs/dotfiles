@@ -102,6 +102,21 @@ cargo install --locked tree-sitter-cli
 # Required for AppImages
 apt install fuse -y
 
+## - - - - - - - - -
+## Node (Required for NVIM)
+## - - - - - - - - -
+
+# Its a little messy because it needs to be sourced for nvm to be available as a command
+# https://stackoverflow.com/a/62838796/8600307
+# ENV NVM_DIR /usr/local/nvm
+# ENV NODE_VERSION v22.12.0
+# RUN mkdir -p /usr/local/nvm 
+# RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION"
+# ENV NODE_PATH $NVM_DIR/versions/node/$NODE_VERSION/bin
+# ENV PATH $NODE_PATH:$PATH
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 #------------------
 #     Tmux
 #------------------

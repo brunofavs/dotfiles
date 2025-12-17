@@ -34,6 +34,9 @@ vim.lsp.enable('ltex')
 vim.lsp.enable('docker_language_server')
 -- Needs spellcheck installed. https://github.com/bash-lsp/bash-language-server
 vim.lsp.enable('bashls')
+vim.lsp.enable('html')
+vim.lsp.enable('css_variables')
+vim.lsp.enable('ts_ls')
 
 -- The name inside '' has to match the one in 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md

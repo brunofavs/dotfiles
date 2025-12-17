@@ -51,7 +51,10 @@ export HYPRSHOT_DIR="$HOME/Pictures/Screenshots"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(copypath
+
+plugins=(
+  # Modified in functions down
+  # copypath
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-vi-mode
@@ -106,6 +109,21 @@ remove-whitespaces(){
 nvim() {
 #     neovide --neovim-bin ~/Apps/nvim10.4/bin/nvim "$@" & disown
     neovide "$@" & disown
+}
+
+#https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/copypath/copypath.plugin.zsh
+function copypath {
+  local file="${1:-.}"
+
+  [[ $file = /* ]] || file="$PWD/$file"
+
+  local abs="${file:a}"
+  local escaped="${(q)abs}"
+
+  # -r outputs raw string (preserves backslashes!)
+  print -r -- "$escaped" | clipcopy || return 1
+
+  echo ${(%):-"%B$escaped%b copied to clipboard."}
 }
 
 
@@ -207,6 +225,4 @@ fi
 #
 export GEM_HOME="$(gem env user_gemhome)"
 export PATH="$PATH:$GEM_HOME/bin"
-
-
 
