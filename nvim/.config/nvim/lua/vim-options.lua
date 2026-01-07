@@ -118,6 +118,18 @@ vim.opt.listchars = { eol = '⤶',
 -- Line breaks at word boundaries instead of letters
 vim.opt_local.linebreak = true
 
+-- Copy current file path to clipboard with F4
+--https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim
+--Full Path
+ vim.keymap.set('n', '<F4>', ':let @+=expand("%:p")<CR>', { noremap = true, silent = true })
+--File name
+-- vim.keymap.set('n', '<S-F4>', ':let @" = expand("%")', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-F4>', ':let @+ = expand("%")<CR>', { noremap = true, silent =
+   true })
+
+
+
+
 -- ººººººººººººººººººººººººººººººººººººººº
 --          Auto commands
 -- ººººººººººººººººººººººººººººººººººººººº
