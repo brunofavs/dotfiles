@@ -81,6 +81,11 @@ alias ementas="docker run --ipc=host --network host --rm gribeiro00/ementas_ua:1
 alias battery_status="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias buds_status="upower -i /org/freedesktop/UPower/devices/headset_dev_0C_8D_CA_5B_30_00"
 
+alias vpn_ua_on="cd /home/bruno/Apps/chrootvpn && ./vpn.sh start"
+alias vpn_ua_off="cd /home/bruno/Apps/chrootvpn && ./vpn.sh stop"
+
+alias mount_w11="sudo mount /dev/nvme0n1p3 ~/SMB/w11"
+
 #------------------------
 #  Functions 
 #------------------------
