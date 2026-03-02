@@ -85,6 +85,7 @@ alias vpn_ua_on="cd /home/bruno/Apps/chrootvpn && ./vpn.sh start"
 alias vpn_ua_off="cd /home/bruno/Apps/chrootvpn && ./vpn.sh stop"
 
 alias mount_w11="sudo mount /dev/nvme0n1p3 ~/SMB/w11"
+alias toggle_socials="sudo /home/bruno/Scripts/toggle_socials.sh"
 
 #------------------------
 #  Functions 
