@@ -172,9 +172,9 @@ export ATOM_EXPERIMENTS="$HOME/atom_experiments"
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion
-# if [ "$(lsb_release -ds)" = "Arch Linux" ]; then
-eval "$(fzf --zsh)"
-# fi
+if [ -z "$CONTAINER_ID" ]; then
+    eval "$(fzf --zsh)"
+fi
 
 # -- Use fd instead of fzf --
 
@@ -211,6 +211,11 @@ if [ "$CONTAINER_ID" = "ubuntu" ]; then
     echo "Sourced dsitro"
 fi
 
+if [ "$CONTAINER_ID" = "larcc_dev" ]; then
+    source ~/.zshrc_larcc_dev
+    # echo "Sourced shell config"
+fi
+
 if [ "$CONTAINER_ID" = "isaac" ]; then
     source ~/.zshrc_isaac
     echo "Sourced distro"
@@ -229,6 +234,14 @@ fi
 #      Ruby
 #---------------------
 #
-export GEM_HOME="$(gem env user_gemhome)"
-export PATH="$PATH:$GEM_HOME/bin"
 
+if [ -z "$CONTAINER_ID" ]; then
+  export GEM_HOME="$(gem env user_gemhome)"
+  export PATH="$PATH:$GEM_HOME/bin"
+fi
+
+
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

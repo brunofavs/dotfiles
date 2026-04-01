@@ -1,4 +1,3 @@
-
 #----------------------
 #      Plugins
 #---------------------
@@ -8,26 +7,18 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # Different name in Ubuntu
 setup_fzf fdfind
 #----------------------
-#      Python
-#---------------------
-
-
-# Adding Script folder to path
-PATH=$PATH:"$HOME/.local/bin"
-
-export PATH
-
-#----------------------
 #      Alias
 #---------------------
 # Overriding cat because in apt the package has another name
 alias cat="batcat"
-
-# Symbolic link from there to /bin instead
-# alias nvim="~/Apps/nvim-ubuntu/squashfs-root/usr/bin/nvim"
 
 #----------------------
 #     ROS2 Jazzy
 #---------------------
 
 source /opt/ros/jazzy/setup.zsh
+
+# Number between 0 and 101
+#https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Domain-ID.html#choosing-a-domain-id-short-version
+export ROS_DOMAIN_ID=0
+export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
