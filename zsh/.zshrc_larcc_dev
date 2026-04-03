@@ -12,6 +12,12 @@ setup_fzf fdfind
 # Overriding cat because in apt the package has another name
 alias cat="batcat"
 
+
+#-------------------------
+#      QT5 & QT6 Theming
+#-------------------------
+
+export QT_STYLE_OVERRIDE=kvantum
 #----------------------
 #     ROS2 Jazzy
 #---------------------

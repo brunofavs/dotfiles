@@ -24,3 +24,11 @@ apt update  && apt upgrade -y
 apt install -y ros-jazzy-desktop
 
 apt install -y '~nros-jazzy-rqt*'
+
+# Themes
+#
+add-apt-repository ppa:papirus/papirus
+
+apt update
+
+apt install qt5-style-kvantum qt6-style-kvantum
