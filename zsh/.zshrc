@@ -32,6 +32,9 @@ export EDITOR="$VISUAL"
 export FILE_MANAGER="thunar"
 
 
+export QT_STYLE_OVERRIDE=kvantum
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

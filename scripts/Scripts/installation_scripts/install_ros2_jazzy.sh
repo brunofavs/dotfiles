@@ -25,8 +25,16 @@ apt install -y ros-jazzy-desktop
 
 apt install -y '~nros-jazzy-rqt*'
 
-# Themes
-#
+# Colcon setup
+# Should come pre-installed with ros-dev-tools, but just in case
+apt install -y python3-colcon-common-extensions
+
+colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
+colcon mixin update default
+
+# ------------------
+#   Themes
+# ------------------
 add-apt-repository ppa:papirus/papirus
 
 apt update

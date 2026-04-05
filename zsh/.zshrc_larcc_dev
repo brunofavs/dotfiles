@@ -28,3 +28,10 @@ source /opt/ros/jazzy/setup.zsh
 #https://docs.ros.org/en/jazzy/Concepts/Intermediate/About-Domain-ID.html#choosing-a-domain-id-short-version
 export ROS_DOMAIN_ID=0
 export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
+
+source /usr/share/colcon_cd/function/colcon_cd.sh
+source /usr/share/colcon_cd/function/colcon_cd-argcomplete.zsh
+export _colcon_cd_root=/opt/ros/jazzy/
+
+# Environments 
+source ~/ros2_ws/install/local_setup.zsh
