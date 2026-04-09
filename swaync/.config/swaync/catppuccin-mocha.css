@@ -1,9 +1,7 @@
-/* Based on https://github.com/catppuccin/swaync/blob/main/assets/mocha.webp */
 * {
   all: unset;
   font-size: 14px;
-  /* font-family: "Ubuntu Nerd Font"; */
-  font-family: "Fira Sans";
+  font-family: "Ubuntu Nerd Font";
   transition: 200ms;
 }
 
@@ -63,27 +61,11 @@ trough {
 
 .notification .notification-content overlay {
   /* icons */
-  margin: 4px 12px 4px 4px;
-  min-width: 64px;
-  min-height: 64px;
-  /* max-width: 64px; */
-  /* max-height: 64px; */
-  border-radius: 50%;
-  /* overflow: hidden; */
-}
-
-.notification-content overlay image {
-  min-width: 64px;
-  min-height: 64px;
-  /* max-width: 64px; */
-  /* max-height: 64px; */
-  -gtk-icon-size: 64px;
-  border-radius: 50%;
+  margin: 4px;
 }
 
 .notification-content .summary {
   color: #cdd6f4;
-  font-weight: bold;
 }
 
 .notification-content .time {
@@ -96,7 +78,6 @@ trough {
 
 .notification > *:last-child > * {
   min-height: 3.4em;
-  /* min-height: 8em; */
 }
 
 .notification-background .close-button {
@@ -343,6 +324,5 @@ scrollbar trough {
 }
 
 .image {
-  /* padding-right: 0.5rem; */
-  padding-right: 0;
+  padding-right: 0.5rem;
 }
