@@ -132,7 +132,13 @@ apt install -y tmux
 #     Utilities
 #------------------
 
-
 apt install -y fd-find fzf 
 # https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu
 ln -s $(which fdfind) ~/.local/bin/fd
+
+# font
+mkdir ~/.fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip -o ~/.fonts/FiraCode.zip
+
+unzip ~/.fonts/FiraCode.zip && rm ~/.fonts/FiraCode.zip
+fc-cache -fv
