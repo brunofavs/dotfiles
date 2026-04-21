@@ -1,7 +1,8 @@
 return {
     {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.6',
+    branch = 'master',
+    version = '0.2.1',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
     local builtin = require("telescope.builtin")
@@ -39,6 +40,12 @@ return {
           find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
         },
       },
+
+      -- -- Too tired to treesitters bullshits
+      -- preview = {
+      --   treesitter = false,
+      -- },
+
     })
 
     -- Show hidden files excluding .git (END)

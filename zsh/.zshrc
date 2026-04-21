@@ -87,7 +87,9 @@ alias buds_status="upower -i /org/freedesktop/UPower/devices/headset_dev_0C_8D_C
 alias vpn_ua_on="cd /home/bruno/Apps/chrootvpn && ./vpn.sh start"
 alias vpn_ua_off="cd /home/bruno/Apps/chrootvpn && ./vpn.sh stop"
 
-alias mount_w11="sudo mount /dev/nvme0n1p3 ~/SMB/w11"
+# For some reason I stopped getting permissions by default
+#alias mount_w11="sudo mount /dev/nvme0n1p3 ~/SMB/w11"
+alias mount_w11="sudo mount /dev/nvme0n1p3 /home/bruno/SMB/w11 -o uid=$(id -u),gid=$(id -g),umask=007"
 alias toggle_socials="sudo /home/bruno/Scripts/toggle_socials.sh"
 
 #------------------------
