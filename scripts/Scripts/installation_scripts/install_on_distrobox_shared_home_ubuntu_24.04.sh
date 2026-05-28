@@ -142,3 +142,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.z
 
 unzip ~/.fonts/FiraCode.zip && rm ~/.fonts/FiraCode.zip
 fc-cache -fv
+
+#pyenv
+
+curl https://pyenv.run | bash
