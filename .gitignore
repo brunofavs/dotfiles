@@ -1,15 +1,15 @@
 nvim/.config/nvim/ngrams_latex/
 
 # Claude Code - sensitive / ephemeral
-.claude/.credentials.json
-.claude/history.jsonl
-.claude/projects/
-.claude/sessions/
-.claude/session-env/
-.claude/shell-snapshots/
-.claude/backups/
-.claude/file-history/
-.claude/paste-cache/
-.claude/cache/
-.claude/mcp-needs-auth-cache.json
-.claude/.last-cleanup
+claude/.claude/.credentials.json
+claude/.claude/history.jsonl
+claude/.claude/projects/
+claude/.claude/sessions/
+claude/.claude/session-env/
+claude/.claude/shell-snapshots/
+claude/.claude/backups/
+claude/.claude/file-history/
+claude/.claude/paste-cache/
+claude/.claude/cache/
+claude/.claude/mcp-needs-auth-cache.json
+claude/.claude/.last-cleanup

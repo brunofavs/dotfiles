@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-05-27T14:26:06.611Z",
+      "updatedAt": "2026-05-27T14:26:06.611Z"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "skillFolderHash": "3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6",
+      "pluginName": "example-skills",
+      "installedAt": "2026-05-27T14:26:51.595Z",
+      "updatedAt": "2026-05-27T14:26:51.595Z"
+    },
+    "research-paper-review": {
+      "source": "besser-pearl/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/besser-pearl/agent-skills.git",
+      "skillPath": "research-paper-review/SKILL.md",
+      "skillFolderHash": "b5da6d0717d894fea5727a8f779cd5f487f4a935",
+      "installedAt": "2026-05-27T14:32:02.289Z",
+      "updatedAt": "2026-05-27T14:32:02.289Z"
+    },
+    "prose-writing": {
+      "source": "haowjy/creative-writing-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/haowjy/creative-writing-skills.git",
+      "skillPath": "skills/prose-writing/SKILL.md",
+      "skillFolderHash": "86b09e0a4701ffc7d776e9aae4c538daa2c2d156",
+      "installedAt": "2026-05-27T21:03:36.756Z",
+      "updatedAt": "2026-05-27T21:03:36.756Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  }
+}
