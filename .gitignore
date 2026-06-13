@@ -13,3 +13,4 @@ claude/.claude/paste-cache/
 claude/.claude/cache/
 claude/.claude/mcp-needs-auth-cache.json
 claude/.claude/.last-cleanup
+claude/.claude/plugins/
