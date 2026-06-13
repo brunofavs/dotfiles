@@ -32,6 +32,8 @@ apt install -y python3-colcon-common-extensions
 colcon mixin add default https://raw.githubusercontent.com/colcon/colcon-mixin-repository/master/index.yaml
 colcon mixin update default
 
+apt install -y python3-vcstool
+
 # ------------------
 #   Themes
 # ------------------

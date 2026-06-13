@@ -48,4 +48,5 @@ export _colcon_cd_root=/opt/ros/jazzy/
 
 # Environments 
 source ~/ros2_workspaces/lar_cc_interface_jazzy/install/local_setup.zsh
-source ~/ros2_ws/install/local_setup.zsh
+#source ~/ros2_ws/install/local_setup.zsh
+#source ~/ros2_workspaces/ws_moveit/install/setup.zsh
