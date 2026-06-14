@@ -24,7 +24,7 @@ local function detect_external(primary)
     return (name and name ~= "") and name or nil
 end
 
-local function apply_secondary(primary, primary_width)
+local function apply_secondary(primary)
     local external, mode = nil, "Extend"
 
     local sf = io.open("/tmp/hyprland_monitor_state", "r")
@@ -44,7 +44,7 @@ local function apply_secondary(primary, primary_width)
     if mode == "Mirror" then
         hl.monitor({ output = external, mode = "preferred", position = "0x0",              scale = 1, mirror = primary })
     else
-        hl.monitor({ output = external, mode = "preferred", position = primary_width .. "x0", scale = 1 })
+        hl.monitor({ output = external, mode = "preferred", position = DEFAULT_POSITION_NEW_MONITORS, scale = 1 })
     end
 end
 
@@ -56,7 +56,10 @@ if is_desktop then
         scale    = 1,
         vrr      = 0,
     })
-    apply_secondary("HDMI-A-1", 2560)
+    -- Random monitors here
+    apply_secondary("HDMI-A-1")
+
+    -- Hard Coded monitors after
 end
 
 if is_laptop then
@@ -66,5 +69,15 @@ if is_laptop then
         position = "0x0",
         scale    = 1,
     })
-    apply_secondary("eDP-1", 1920)
+
+    -- Random monitors here
+    apply_secondary("eDP-1")
+
+    -- Hard Coded monitors after
+    hl.monitor({
+        output   = "desc:LG Electronics LG ULTRAGEAR+ 410NTWG8L889",
+        mode     = "2560x1440@143.99",
+        position = "auto-left",
+        scale    = 1,
+    })
 end

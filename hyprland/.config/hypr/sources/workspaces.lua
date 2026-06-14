@@ -21,7 +21,7 @@ end
 
 if is_laptop then
   if EXTERNAL_MONITOR_MAIN then
-    
+
     hl.workspace_rule({ workspace = "1",  monitor = "HDMI-A-1" })
     hl.workspace_rule({ workspace = "2",  monitor = "HDMI-A-1" })
     hl.workspace_rule({ workspace = "3",  monitor = "HDMI-A-1" })
@@ -33,8 +33,16 @@ if is_laptop then
     hl.workspace_rule({ workspace = "9",  monitor = "HDMI-A-1" })
     hl.workspace_rule({ workspace = "10", monitor = "HDMI-A-1" })
 
+    hl.workspace_rule({ workspace = "11", monitor = "eDP-1" })
+
+    -- To move workspaces to new monitor. If not changed does not do anything
+    for i = 1, 10 do
+      hl.dsp.workspace.move({ workspace = tostring(i), monitor = "HDMI-A-1" })
+    end
+    hl.dsp.workspace.move({ workspace = "11", monitor = "eDP-1" })
+
   else
-  
+
     hl.workspace_rule({ workspace = "1",  monitor = "eDP-1" })
     hl.workspace_rule({ workspace = "2",  monitor = "eDP-1" })
     hl.workspace_rule({ workspace = "3",  monitor = "eDP-1" })
@@ -45,6 +53,13 @@ if is_laptop then
     hl.workspace_rule({ workspace = "8",  monitor = "eDP-1" })
     hl.workspace_rule({ workspace = "9",  monitor = "eDP-1" })
     hl.workspace_rule({ workspace = "10", monitor = "eDP-1" })
+
+    hl.workspace_rule({ workspace = "11", monitor = "HDMI-A-1" })
+
+    for i = 1, 10 do
+      hl.dsp.workspace.move({ workspace = tostring(i), monitor = "eDP-1" })
+    end
+    hl.dsp.workspace.move({ workspace = "11", monitor = "HDMI-A-1" })
 
   end
 

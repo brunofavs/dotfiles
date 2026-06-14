@@ -151,4 +151,4 @@ hl.bind("SHIFT" .. " + " .. "F10", hl.dsp.pass({ window = "class:^(com\\.obsproj
 hl.bind("ALT" .. " + " .. "TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
 -- For OLED
 hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar || waybar"), { ignore_mods = true, transparent = true, long_press = true })
-hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar"), { ignore_mods = true,  transparent = true, release = true })
+-- hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar"), { ignore_mods = true,  transparent = true, release = true })
