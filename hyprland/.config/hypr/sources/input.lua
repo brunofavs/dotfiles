@@ -1,0 +1,42 @@
+---@module 'hl'
+
+--############
+--## INPUT ###
+--############
+
+-- https://wiki.hyprland.org/Configuring/Variables/#input
+hl.config({
+    input = {
+        -- kb_layout = pt
+        kb_layout = "us,pt",
+        -- Good reference picture
+        -- https://github.com/google/us-altgr-intl/blob/master/images/keyboard_english_us_intl.png
+        kb_variant = "altgr-intl",
+        -- kb_options = grp:alts_toggle
+        -- https://man.archlinux.org/man/xkeyboard-config-2.7.en#Switching_to_another_layout
+        kb_options = "grp:win_space_toggle",
+        follow_mouse = 1,
+        sensitivity = 0,
+        -- -1.0 - 1.0, 0 means no modification.
+        touchpad = {
+            natural_scroll = true,
+            middle_button_emulation = true,
+        },
+    },
+})
+
+-- https://wiki.hyprland.org/Configuring/Variables/#gestures
+
+-- Example per-device config
+-- See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
+-- hl.device({
+--     name = "epic-mouse-v1",
+--     sensitivity = -0.5,
+-- })
+
+--# Temporary solution for fixing laggy mouse on second screen
+hl.config({
+    cursor = {
+        -- no_hardware_cursors = true
+    },
+})

@@ -1,18 +1,18 @@
 {
     "custom/quicklink1": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/settings.sh",
-        "on-click-middle": "~/.config/hypr/scripts/reload.sh",
+        "on-click": "~/.config/waybar/scripts/settings.sh",
+        "on-click-middle": "~/.config/waybar/scripts/reload.sh",
         "tooltip-format": "Open Hyprland Settings"
     }, 
     "custom/quicklink2": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/browser.sh",
+        "on-click": "~/.config/waybar/scripts/browser.sh",
         "tooltip-format": "Open the browser"
     },
     "custom/quicklink3": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/filemanager.sh",
+        "on-click": "~/.config/waybar/scripts/filemanager.sh",
         "tooltip-format": "Open the filemanager"
     }, 
     "custom/quicklinkempty": {

@@ -1,33 +1,33 @@
 #!/bin/bash
 
-# Path to your monitor configuration file
-CONFIG_FILE="$HOME/.config/hypr/sources/monitors_auto.conf"
+STATE_FILE="/tmp/hyprland_monitor_state"
 
-# List of available monitor modes (menu number → keyword in line)
-declare -A OPTIONS=(
-    ["1"]="Extend"
-    ["2"]="Mirror"
-)
+# Determine primary monitor based on machine type
+if ls /sys/class/power_supply/ 2>/dev/null | grep -qi "BAT"; then
+    primary="eDP-1"
+else
+    primary="HDMI-A-1"
+fi
 
-# Display rofi selection menu
-SELECTED=$(printf "%s\n" "${OPTIONS[@]}" | rofi -dmenu -p "Select Monitor Mode:")
+# Find first connected external monitor (not primary)
+external=""
+for d in /sys/class/drm/card*-*; do
+    name=$(basename "$d" | sed 's/card[0-9]*-//')
+    status=$(cat "$d/status" 2>/dev/null)
+    if [ "$status" = "connected" ] && [ "$name" != "$primary" ]; then
+        external="$name"
+        break
+    fi
+done
 
-# Exit if no selection was made
-if [[ -z "$SELECTED" ]]; then
-    echo "No option selected. Exiting."
+if [ -z "$external" ]; then
+    notify-send "Monitor" "No external monitor detected"
     exit 1
 fi
 
-KEYWORD="${OPTIONS[$SELECTED]}"
+SELECTED=$(printf "Extend\nMirror" | rofi -dmenu -p "Monitor Mode ($external):")
 
-# 1. Comment only lines that *start with 'monitor' and are currently active*
-# sed -i '/^[[:space:]]*monitor/s/^/# /' "$CONFIG_FILE"
-sed -i '/^[[:space:]]*monitor[[:space:]=]/ s/^/# /' "$CONFIG_FILE"
+[ -z "$SELECTED" ] && exit 0
 
-# 2. Uncomment the selected mode (remove leading '# ' or '#')
-sed -i "/${SELECTED}/s/^[[:space:]]*#[[:space:]]*//" "$CONFIG_FILE"
-
-# Optional: reload Hyprland (uncomment if needed)
-# hyprctl reload
-
-echo " Activated monitor profile: $SELECTED"
+echo "${external}:${SELECTED}" > "$STATE_FILE"
+hyprctl reload
