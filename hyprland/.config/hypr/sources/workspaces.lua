@@ -4,6 +4,9 @@
 hl.bind(mainMod .. " + " .. "S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind("SHIFT" .. " + " .. mainMod .. " + " .. "S", hl.dsp.window.move({ workspace = "special:magic" }))
 
+
+hl.bind(mainMod .. " + " .. "ALT" .. "+" .. "S" , hl.dsp.workspace.swap_monitors({monitor1 = "eDP-1", monitor2 = "HDMI-A-1"}))
+
 if is_desktop then
   
   hl.workspace_rule({ workspace = "1",  monitor = "HDMI-A-1" })
@@ -33,13 +36,7 @@ if is_laptop then
     hl.workspace_rule({ workspace = "9",  monitor = "HDMI-A-1" })
     hl.workspace_rule({ workspace = "10", monitor = "HDMI-A-1" })
 
-    hl.workspace_rule({ workspace = "11", monitor = "eDP-1" })
-
-    -- To move workspaces to new monitor. If not changed does not do anything
-    for i = 1, 10 do
-      hl.dsp.workspace.move({ workspace = tostring(i), monitor = "HDMI-A-1" })
-    end
-    hl.dsp.workspace.move({ workspace = "11", monitor = "eDP-1" })
+    hl.workspace_rule({ workspace = "11", monitor = "eDP-1", persistent = true })
 
   else
 
@@ -54,12 +51,8 @@ if is_laptop then
     hl.workspace_rule({ workspace = "9",  monitor = "eDP-1" })
     hl.workspace_rule({ workspace = "10", monitor = "eDP-1" })
 
-    hl.workspace_rule({ workspace = "11", monitor = "HDMI-A-1" })
+    hl.workspace_rule({ workspace = "11", monitor = "HDMI-A-1", persistent = true })
 
-    for i = 1, 10 do
-      hl.dsp.workspace.move({ workspace = tostring(i), monitor = "eDP-1" })
-    end
-    hl.dsp.workspace.move({ workspace = "11", monitor = "HDMI-A-1" })
 
   end
 
