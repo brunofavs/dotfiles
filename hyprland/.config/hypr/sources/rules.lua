@@ -7,12 +7,14 @@ hl.window_rule({
     match = {
         class = "^(xwaylandvideobridge)$",
     },
-    opacity = { 0.0, "override" },
+    opacity = "0.0 override",
     no_anim = true,
     no_initial_focus = true,
     max_size = { 1, 1 },
     no_blur = true,
 })
+
+-- App specific rules
 
 hl.window_rule({
     name  = "windowrule-2",
@@ -23,13 +25,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "windowrule-3",
+    name  = "spotify",
     match = {
         class = "(Spotify)",
         focus = 0,
         pin = 0,
     },
-    opacity = 0.7,
+    opacity = "0.7",
 })
 
 hl.window_rule({
@@ -37,7 +39,15 @@ hl.window_rule({
     match = {
         class = "(discord)",
     },
-    opacity = 0.9,
+    opacity = "0.9",
+})
+
+hl.window_rule({
+    name  = "windowrule-4",
+    match = {
+        class = "(vesktop)",
+    },
+    opacity = "0.9",
 })
 
 hl.window_rule({
@@ -47,7 +57,7 @@ hl.window_rule({
         focus = 0,
         pin = 0,
     },
-    opacity = 0.7,
+    opacity = "0.7",
 })
 
 hl.window_rule({
@@ -58,8 +68,10 @@ hl.window_rule({
         pin = 0,
         fullscreen = 0,
     },
-    opacity = 0.7,
+    opacity = "0.7",
 })
+
+-- Miscellaneous rules
 
 hl.window_rule({
     name  = "windowrule-7",
@@ -72,23 +84,23 @@ hl.window_rule({
 -- Prevent idling when fullscreen
 
 hl.window_rule({
-    name  = "windowrule-1",
+    name  = "windowrule-8",
     match = {
-        class = "^(*)$",
+        class = ".*",
     },
     idle_inhibit = "fullscreen",
 })
 
 hl.window_rule({
-    name  = "windowrule-2",
+    name  = "windowrule-9",
     match = {
-        title = "^(*)$",
+        title = ".*",
     },
     idle_inhibit = "fullscreen",
 })
 
 hl.window_rule({
-    name  = "windowrule-3",
+    name  = "windowrule-10",
     match = {
         fullscreen = 1,
     },

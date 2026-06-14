@@ -8,7 +8,7 @@
 hl.config({
     input = {
         -- kb_layout = pt
-        kb_layout = { "us", "pt" },
+        kb_layout = "us,pt",
         -- Good reference picture
         -- https://github.com/google/us-altgr-intl/blob/master/images/keyboard_english_us_intl.png
         kb_variant = "altgr-intl",
@@ -29,10 +29,10 @@ hl.config({
 
 -- Example per-device config
 -- See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
-hl.device({
-    name = "epic-mouse-v1",
-    sensitivity = -0.5,
-})
+-- hl.device({
+--     name = "epic-mouse-v1",
+--     sensitivity = -0.5,
+-- })
 
 --# Temporary solution for fixing laggy mouse on second screen
 hl.config({

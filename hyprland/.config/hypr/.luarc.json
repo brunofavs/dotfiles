@@ -6,6 +6,8 @@
     "mainMod",
     "terminal",
     "fileManager",
-    "menu"
+    "menu",
+    "is_laptop",
+    "is_desktop"
   ]
 }

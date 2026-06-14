@@ -12,16 +12,13 @@ hl.config({
         gaps_in = 3,
         gaps_out = 6,
         border_size = 2,
-        -- https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-        -- col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
-        -- col.active_border =  rgba(51,204,255,0.933) rgba(0,255,153,0.933) 45deg
         -- Set to true enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = true,
         -- Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false,
         layout = "dwindle",
         col = {
-            active_border = { "rgba(51", 204, 255, "0.533) rgba(0", 255, 153, "0.533) 45deg" },
+            active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
             inactive_border = "rgba(595959aa)",
         },
     },
@@ -41,28 +38,33 @@ hl.config({
             color = "rgba(1a1a1aee)",
         },
         -- https://wiki.hyprland.org/Configuring/Variables/#blur
-        -- blur {
-        --     enabled = true
-        --     size = 5
-        --     passes = 2
-        --     new_optimizations = yes
-        --     ignore_opacity=true
-        --
-        -- }
+        blur ={
+            enabled = true,
+            size = 5,
+            passes = 3,
+
+        }
     },
 })
 
--- https://wiki.hyprland.org/Configuring/Variables/#animations
 hl.config({
     animations = {
+        -- enabled = false,
         enabled = true,
         -- Default animations, see https://wiki.hyprland.org/Configuring/Animations/ for more
     },
 })
 
+hl.animation({ leaf = "global",                enabled = true,  speed = 5,     bezier = "default" })
+hl.animation({ leaf = "border",                enabled = true,  speed = 2,     bezier = "default" })
+hl.animation({ leaf = "windows",               enabled = true,  speed = 6,     bezier = "default" })
+hl.animation({ leaf = "workspaces",            enabled = true,  speed = 3.5,   bezier = "default" })
+hl.animation({ leaf = "specialWorkspace",      enabled = true,  speed = 3.5,    bezier = "default", style = "fade" })
+hl.animation({ leaf = "specialWorkspaceIn",    enabled = true,  speed = 15,    bezier = "default", style = "fade" })
+hl.animation({ leaf = "specialWorkspaceOut",   enabled = true,  speed = 4,     bezier = "default", style = "fade" })
+
 hl.config({
     group = {
-        -- auto_group = false
         groupbar = {
             enabled = true,
             height = 10,
@@ -75,7 +77,7 @@ hl.config({
             },
         },
         col = {
-            border_active = { "rgba(51", 204, 255, "0.533) rgba(0", 255, 153, "0.533) 45deg" },
+            border_active = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
             border_inactive = "rgba(595959aa)",
         },
     },

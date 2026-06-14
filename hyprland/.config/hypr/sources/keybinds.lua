@@ -16,7 +16,7 @@ hl.bind("ALT" .. " + " .. "r", hl.dsp.submap("read"))
 
 -- Start a submap called "read".
 hl.define_submap("read", function()
-    hl.bind("space", hl.dsp.pass("class:^(firefox)$"))
+    hl.bind("space", hl.dsp.pass({ window = "class:^(firefox)$" }))
     -- Use `reset` to go back to the global submap
     hl.bind("escape", hl.dsp.submap("reset"))
 end)
@@ -24,7 +24,7 @@ end)
 -- -----------
 -- Lock Screen
 -- -----------
-hl.bind("156", hl.dsp.exec_cmd("hyprlock"), { locked = true })
+hl.bind("code:156", hl.dsp.exec_cmd("hyprlock"), { locked = true })
 
 -- -----------------------
 -- Manage External Screen
@@ -35,8 +35,8 @@ hl.bind(mainMod .. " + " .. "P", hl.dsp.exec_cmd("~/.config/hypr/scripts/change_
 -- Audio
 -- -----------
 
-hl.bind("122", hl.dsp.exec_cmd("exec swayosd-client --output-volume lower"), { locked = true })
-hl.bind("123", hl.dsp.exec_cmd("exec swayosd-client --output-volume raise"), { locked = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("exec swayosd-client --output-volume lower"), { locked = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("exec swayosd-client --output-volume raise"), { locked = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("exec swayosd-client --output-volume mute-toggle"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next && ~/.config/hypr/scripts/spotify_song_notification.sh"), { locked = true })
@@ -46,7 +46,7 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous && ~/.config/hypr/s
 -- -----------
 -- Power (Laptop)
 -- -----------
-hl.bind("211", hl.dsp.exec_cmd("~/.config/hypr/scripts/power_profile_switcher.sh"), { locked = true })
+hl.bind("code:211", hl.dsp.exec_cmd("~/.config/hypr/scripts/power_profile_switcher.sh"), { locked = true })
 
 -- -----------
 -- Brightness (Laptop)
@@ -56,8 +56,13 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 20%-"), { lock
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl s 20%-"), { locked = true })
 hl.bind("XF86KbdBrightnessUp", hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight s +1"), { locked = true })
 hl.bind("XF86KbdBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight s 1-"), { locked = true })
--- bindl = CTRL ,XF86AudioMute, exec, hyprctl dispatch dpms toggle
-hl.bind("CTRL" .. " + " .. "XF86AudioMute", hl.dsp.exec_cmd("bash -c '~/.config/hypr/scripts/disable_mouse.sh; hyprctl dispatch dpms toggle'"), { locked = true })
+
+-- https://wiki.hypr.land/Configuring/Basics/Dispatchers/#cursor
+hl.bind("CTRL" .. " + " .. "XF86AudioMute", function()
+                                               hl.timer(function()
+                                                 hl.dispatch(hl.dsp.dpms({ action = "toggle" }))
+                                               end, {timeout = 500, type = "oneshot"})
+                                             end)
 
 -- -----------
 -- Walpapers
@@ -88,10 +93,6 @@ hl.bind(mainMod .. " + " .. "V", hl.dsp.window.float())
 hl.bind(mainMod .. " + " .. "R", hl.dsp.exec_cmd(menu))
 -- bind = $mainMod, P, pseudo, # dwindle
 hl.bind("SHIFT" .. " + " .. mainMod .. " + " .. "J", hl.dsp.layout("togglesplit"))
-hl.bind("ALT" .. " + " .. "TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
--- For OLED
-hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar || waybar"), { ignore_mods = true, transparent = true })
-hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar"), { ignore_mods = true, repeating = true, transparent = true })
 
 -------------
 -- Windows
@@ -120,7 +121,8 @@ hl.bind(mainMod .. " + " .. "mouse:273", hl.dsp.window.resize(), { mouse = true 
 hl.bind(mainMod .. " + " .. "Z", hl.dsp.exec_cmd("~/.config/hypr/scripts/fullscreen.sh >> /tmp/debug.txt"))
 
 -- Force FullScreen
-hl.bind("SHIFT" .. " + " .. mainMod .. " + " .. "Z", hl.dsp.window.fullscreen())
+hl.bind("SHIFT" .. " + " .. mainMod .. " + " .. "Z", hl.dsp.window.fullscreen({mode = "fullscreen", action = "toggle"}))
+hl.bind(mainMod .. " + " .. "Z", hl.dsp.window.fullscreen({mode = "maximized", action = "toggle"}))
 
 -------------
 -- Groups
@@ -140,11 +142,13 @@ hl.bind(mainMod .. " + " .. "ALT" .. " + " .. "down" , hl.dsp.window.move({ dire
 -------------
 
 -- OBS
-hl.bind("SHIFT" .. " + " .. "F10", hl.dsp.pass("class:^(com\\.obsproject\\.Studio)$"))
+hl.bind("SHIFT" .. " + " .. "F10", hl.dsp.pass({ window = "class:^(com\\.obsproject\\.Studio)$" }))
 
 -------------
--- Plugins
+-- Plugins & Apps
 -------------
 
--- https://github.com/KZDKM/Hyprspace/issues/82
--- bind = $mainMod, tab, overview:toggle
+hl.bind("ALT" .. " + " .. "TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"))
+-- For OLED
+hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar || waybar"), { ignore_mods = true, transparent = true, long_press = true })
+hl.bind(mainMod .. " + " .. "SUPER_L", hl.dsp.exec_cmd("pkill waybar"), { ignore_mods = true,  transparent = true, release = true })
