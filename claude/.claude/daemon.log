@@ -1,0 +1,74 @@
+[2026-06-25T16:10:45.802Z] [supervisor] ─── daemon start ─── version=2.1.191 pid=21257 origin=transient
+[2026-06-25T16:10:45.813Z] [supervisor] auth: scheduling proactive refresh in 6545s
+[2026-06-25T16:10:45.813Z] [supervisor] auth: scheduling proactive refresh in 6545s
+[2026-06-25T16:10:45.814Z] [supervisor] workers=0
+[2026-06-25T16:10:45.899Z] [bg] bg spawned 96b13d80 (spare)
+[2026-06-25T16:10:45.900Z] [bg] bg spawned 28ceda90 (slash)
+[2026-06-25T16:10:45.904Z] [bg] bg spare spawned host pid=21281
+[2026-06-25T17:10:45.876Z] [bg] bg settled 96b13d80 (done)
+[2026-06-25T17:59:50.681Z] [supervisor] auth: proactive refresh starting
+[2026-06-25T17:59:50.979Z] [supervisor] auth: scheduling proactive refresh in 28560s
+[2026-06-25T17:59:50.979Z] [supervisor] auth: proactive refresh succeeded
+[2026-06-26T15:43:03.860Z] [supervisor] binary at /home/bruno/.local/bin/claude changed (/home/bruno/.local/share/claude/versions/2.1.191 → /home/bruno/.local/share/claude/versions/2.1.193) — self-restarting for upgrade
+[2026-06-26T15:43:03.861Z] [supervisor] shutting down (cause=upgrade, uptime=84738s, leases=2, live_workers=1)
+[2026-06-26T15:43:03.987Z] [supervisor] ─── daemon start ─── version=2.1.193 pid=31680 origin=transient
+[2026-06-26T15:43:03.990Z] [supervisor] auth: scheduling proactive refresh in 5s
+[2026-06-26T15:43:03.998Z] [supervisor] ─── daemon start ─── version=2.1.193 pid=31677 origin=transient
+[2026-06-26T15:43:04.008Z] [supervisor] another daemon is already running (pid=31680, version=2.1.193, origin=transient; an on-demand daemon never displaces a running one). Run `claude daemon stop` to stop it, then retry.
+[2026-06-26T15:43:04.253Z] [supervisor] auth: scheduling proactive refresh in 5s
+[2026-06-26T15:43:04.253Z] [supervisor] workers=0
+[2026-06-26T15:43:04.259Z] [bg] bg adopt: adopted=1 respawned=0 dead=0
+[2026-06-26T15:43:04.260Z] [bg] bg orphan-spare reap: 1
+[2026-06-26T15:43:04.264Z] [bg] bg spare spawned host pid=31720
+[2026-06-26T15:43:09.253Z] [supervisor] auth: proactive refresh starting
+[2026-06-26T15:43:09.253Z] [supervisor] auth: proactive refresh failed, signalling re-auth required
+[2026-06-26T15:43:09.256Z] [supervisor] auth: headless daemon cannot complete OAuth — run `claude auth login` to refresh
+[2026-06-26T15:43:09.256Z] [supervisor] auth: no token found, will re-check keychain every 30s
+[2026-06-26T16:26:22.742Z] [supervisor] shutting down (cause=signal, uptime=2599s, leases=2, live_workers=1)
+[2026-06-26T16:26:22.903Z] [supervisor] ─── daemon start ─── version=2.1.193 pid=34487 origin=transient
+[2026-06-26T16:26:22.915Z] [supervisor] auth: no token found, will re-check keychain every 30s
+[2026-06-26T16:26:22.916Z] [supervisor] workers=0
+[2026-06-26T16:26:22.926Z] [bg] bg adopt: adopted=1 respawned=0 dead=0
+[2026-06-26T16:26:22.927Z] [bg] bg orphan-spare reap: 1
+[2026-06-26T16:26:22.936Z] [bg] bg spare spawned host pid=34513
+[2026-06-26T16:26:22.981Z] [bg] bg claimed-spare 10ec1923 (spare)
+[2026-06-26T16:26:22.983Z] [bg] bg spare spawned host pid=34527
+[2026-06-30T17:12:14.493Z] [supervisor] ─── daemon start ─── version=2.1.195 pid=45451 origin=transient
+[2026-06-30T17:12:14.507Z] [supervisor] auth: scheduling proactive refresh in 20768s
+[2026-06-30T17:12:14.507Z] [supervisor] auth: scheduling proactive refresh in 20768s
+[2026-06-30T17:12:14.508Z] [supervisor] workers=0
+[2026-06-30T17:12:14.512Z] [bg] bg: control socket bound at /tmp/cc-daemon-1000/a6599c5a/control.sock
+[2026-06-30T17:12:14.515Z] [bg] bg adopt: adopted=0 respawned=0 dead=2
+[2026-06-30T17:12:14.581Z] [bg] bg spawned 6266454d (slash)
+[2026-06-30T17:12:14.581Z] [bg] bg spawned ae740673 (spare)
+[2026-06-30T17:12:14.585Z] [bg] bg spare spawned host pid=45470
+[2026-06-30T17:12:20.303Z] [bg] bg claimed-spare 5668314d (fleet)
+[2026-06-30T17:12:20.305Z] [bg] bg spare spawned host pid=45658
+[2026-06-30T17:13:14.509Z] [supervisor] binary at /home/bruno/.local/bin/claude changed (/home/bruno/.local/share/claude/versions/2.1.195 → /home/bruno/.local/share/claude/versions/2.1.196) — self-restarting for upgrade
+[2026-06-30T17:13:14.510Z] [supervisor] shutting down (cause=upgrade, uptime=60s, leases=2, live_workers=3)
+[2026-06-30T17:13:14.645Z] [supervisor] ─── daemon start ─── version=2.1.196 pid=45774 origin=transient
+[2026-06-30T17:13:14.655Z] [supervisor] ─── daemon start ─── version=2.1.196 pid=45777 origin=transient
+[2026-06-30T17:13:14.658Z] [supervisor] auth: scheduling proactive refresh in 20708s
+[2026-06-30T17:13:14.659Z] [supervisor] auth: scheduling proactive refresh in 20708s
+[2026-06-30T17:13:14.660Z] [supervisor] workers=0
+[2026-06-30T17:13:14.665Z] [bg] bg: control socket bound at /tmp/cc-daemon-1000/a6599c5a/control.sock
+[2026-06-30T17:13:14.667Z] [supervisor] another daemon won the lock race (pid=45774) — exiting
+[2026-06-30T17:13:14.671Z] [bg] bg adopt: adopted=3 respawned=0 dead=0
+[2026-06-30T17:13:14.672Z] [bg] bg orphan-spare reap: 1
+[2026-06-30T17:13:14.681Z] [bg] bg spare spawned host pid=45811
+[2026-06-30T17:15:19.253Z] [bg] bg settled 5668314d (killed)
+[2026-06-30T17:15:25.651Z] [bg] bg claimed-spare 5aecd956 (fleet)
+[2026-06-30T17:15:25.653Z] [bg] bg spare spawned host pid=46320
+[2026-06-30T18:12:14.719Z] [bg] bg settled ae740673 (done)
+[2026-06-30T18:16:14.673Z] [supervisor] binary at /home/bruno/.local/bin/claude changed (/home/bruno/.local/share/claude/versions/2.1.196 → /home/bruno/.local/share/claude/versions/2.1.197) — self-restarting for upgrade
+[2026-06-30T18:16:14.673Z] [supervisor] shutting down (cause=upgrade, uptime=3780s, leases=2, live_workers=2)
+[2026-06-30T18:16:14.808Z] [supervisor] ─── daemon start ─── version=2.1.197 pid=56596 origin=transient
+[2026-06-30T18:16:14.811Z] [supervisor] auth: scheduling proactive refresh in 16928s
+[2026-06-30T18:16:14.821Z] [supervisor] auth: scheduling proactive refresh in 16928s
+[2026-06-30T18:16:14.820Z] [supervisor] ─── daemon start ─── version=2.1.197 pid=56593 origin=transient
+[2026-06-30T18:16:14.821Z] [supervisor] workers=0
+[2026-06-30T18:16:14.829Z] [bg] bg: control socket bound at /tmp/cc-daemon-1000/a6599c5a/control.sock
+[2026-06-30T18:16:14.830Z] [supervisor] another daemon is already running (pid=56596, version=2.1.197, origin=transient; an on-demand daemon never displaces a running one). Run `claude daemon stop` to stop it, then retry.
+[2026-06-30T18:16:14.834Z] [bg] bg adopt: adopted=2 respawned=0 dead=0
+[2026-06-30T18:16:14.835Z] [bg] bg orphan-spare reap: 1
+[2026-06-30T18:16:14.844Z] [bg] bg spare spawned host pid=56660

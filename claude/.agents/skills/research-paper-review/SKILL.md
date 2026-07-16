@@ -76,6 +76,13 @@ Immediately after the Summary section in the output, include a **"Visual Overvie
 **1. Demo / video links**
 Scan the full text for any URLs pointing to video demonstrations, project pages, or supplementary material (e.g. YouTube, GitHub Pages, arXiv supplementary). Include every one you find as a markdown link with a short descriptive label.
 
+> **URL casing warning:** Copy URLs character-by-character, preserving exact case. Shortened URLs (youtu.be, bit.ly, t.co, etc.) are fully case-sensitive — a single wrong character breaks the link silently. Watch especially for these lookalike pairs that OCR and LLM reading commonly confuse:
+> - `O` (capital oh) ↔ `0` (zero)
+> - `l` (lowercase L) ↔ `1` (one) ↔ `I` (capital i)
+> - `S` ↔ `5`, `B` ↔ `8`, `Z` ↔ `2`
+>
+> When the PDF was read as an image rendering (via pdftoppm), prefer to re-read the page as text with the Read tool to get the raw characters rather than relying on visual recognition. If uncertainty remains, write the URL in a code block and add a note: *"verify casing before sharing"*.
+
 **2. Key figures**
 Identify figures that give the reader an immediate intuition for the *framework, architecture, or proposed methodology* — the kind of diagram that, if shown to a newcomer, would let them grasp what the paper is about in seconds. Good candidates:
 - System/pipeline overview diagrams

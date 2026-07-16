@@ -1,0 +1,38 @@
+{
+  "state": "working",
+  "detail": "`ur_control.launch.py` only passes `robot_ip` and `ur_type` into the description launch — it relies on launch-config **i",
+  "tempo": "blocked",
+  "needs": "send a prompt to start",
+  "output": null,
+  "children": null,
+  "linkScanOffset": 0,
+  "template": "bg",
+  "respawnFlags": [
+    "--effort",
+    "xhigh",
+    "--permission-mode",
+    "default",
+    "--model",
+    "opus"
+  ],
+  "bgIsolation": "none",
+  "providerEnv": {},
+  "sessionPermissionRules": {
+    "allow": [
+      "Read(//opt/ros/**)",
+      "Read(//home/bruno/.ros/log/**)"
+    ],
+    "deny": []
+  },
+  "intent": "[Request interrupted by user for tool use]",
+  "name": "Configure Robotiq gripper xacro parameters",
+  "nameSource": "auto",
+  "sessionId": "6266454d-79d1-4db8-8522-2f771cf84ebf",
+  "resumeSessionId": "6266454d-79d1-4db8-8522-2f771cf84ebf",
+  "daemonShort": "6266454d",
+  "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+  "createdAt": "2026-06-30T17:12:14.337Z",
+  "updatedAt": "2026-06-30T17:12:14.936Z",
+  "firstTerminalAt": null,
+  "backend": "daemon"
+}

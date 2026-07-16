@@ -68,7 +68,7 @@ hl.window_rule({
         pin = 0,
         fullscreen = 0,
     },
-    opacity = "0.7",
+    opacity = "1.0",
 })
 
 -- Miscellaneous rules

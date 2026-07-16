@@ -1,0 +1,221 @@
+{
+  "version": 4,
+  "lastComputedDate": "2026-06-22",
+  "dailyActivity": [
+    {
+      "date": "2026-05-27",
+      "messageCount": 256,
+      "sessionCount": 3,
+      "toolCallCount": 47
+    },
+    {
+      "date": "2026-05-28",
+      "messageCount": 56,
+      "sessionCount": 1,
+      "toolCallCount": 10
+    },
+    {
+      "date": "2026-06-03",
+      "messageCount": 69,
+      "sessionCount": 1,
+      "toolCallCount": 17
+    },
+    {
+      "date": "2026-06-05",
+      "messageCount": 23,
+      "sessionCount": 1,
+      "toolCallCount": 5
+    },
+    {
+      "date": "2026-06-09",
+      "messageCount": 166,
+      "sessionCount": 3,
+      "toolCallCount": 52
+    },
+    {
+      "date": "2026-06-11",
+      "messageCount": 413,
+      "sessionCount": 2,
+      "toolCallCount": 93
+    },
+    {
+      "date": "2026-06-12",
+      "messageCount": 266,
+      "sessionCount": 4,
+      "toolCallCount": 84
+    },
+    {
+      "date": "2026-06-13",
+      "messageCount": 523,
+      "sessionCount": 1,
+      "toolCallCount": 123
+    },
+    {
+      "date": "2026-06-14",
+      "messageCount": 100,
+      "sessionCount": 0,
+      "toolCallCount": 9
+    },
+    {
+      "date": "2026-06-15",
+      "messageCount": 71,
+      "sessionCount": 0,
+      "toolCallCount": 12
+    },
+    {
+      "date": "2026-06-16",
+      "messageCount": 130,
+      "sessionCount": 1,
+      "toolCallCount": 20
+    },
+    {
+      "date": "2026-06-17",
+      "messageCount": 122,
+      "sessionCount": 2,
+      "toolCallCount": 26
+    },
+    {
+      "date": "2026-06-18",
+      "messageCount": 69,
+      "sessionCount": 1,
+      "toolCallCount": 15
+    },
+    {
+      "date": "2026-06-19",
+      "messageCount": 86,
+      "sessionCount": 2,
+      "toolCallCount": 16
+    },
+    {
+      "date": "2026-06-22",
+      "messageCount": 98,
+      "sessionCount": 1,
+      "toolCallCount": 23
+    }
+  ],
+  "dailyModelTokens": [
+    {
+      "date": "2026-05-27",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 91262
+      }
+    },
+    {
+      "date": "2026-05-28",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 7634
+      }
+    },
+    {
+      "date": "2026-06-03",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 37078
+      }
+    },
+    {
+      "date": "2026-06-05",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 11246
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 76038
+      }
+    },
+    {
+      "date": "2026-06-11",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 165447
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 106453
+      }
+    },
+    {
+      "date": "2026-06-13",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 230782
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 51234
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 12736
+      }
+    },
+    {
+      "date": "2026-06-16",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 15717
+      }
+    },
+    {
+      "date": "2026-06-17",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 15383
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 14879
+      }
+    },
+    {
+      "date": "2026-06-19",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 16775
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "tokensByModel": {
+        "claude-sonnet-4-6": 26933
+      }
+    }
+  ],
+  "modelUsage": {
+    "claude-sonnet-4-6": {
+      "inputTokens": 6856,
+      "outputTokens": 872741,
+      "cacheReadInputTokens": 61170748,
+      "cacheCreationInputTokens": 3213095,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
+    }
+  },
+  "totalSessions": 23,
+  "totalMessages": 2448,
+  "longestSession": {
+    "sessionId": "5cc9c598-91de-400c-b9ac-4fd9a93eef76",
+    "duration": 262729250,
+    "messageCount": 212,
+    "timestamp": "2026-06-12T18:01:40.162Z"
+  },
+  "firstSessionDate": "2026-05-27T14:24:02.257Z",
+  "hourCounts": {
+    "0": 1,
+    "9": 2,
+    "13": 1,
+    "14": 6,
+    "15": 1,
+    "16": 5,
+    "17": 4,
+    "18": 1,
+    "21": 2
+  },
+  "totalSpeculationTimeSavedMs": 0
+}

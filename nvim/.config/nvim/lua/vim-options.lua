@@ -132,6 +132,7 @@ vim.keymap.set('n', '<S-F4>', ':let @+ = expand("%")<CR>', { noremap = true, sil
 
 -- Insert a new line below the current line and return to normal mode, to avoid having to press O Esc O Esc
 vim.keymap.set('n', '<Enter>', 'o<Esc>', { noremap = true, silent = true })
+vim.keymap.set('n', '<S-Enter>', 'O<Esc>', { noremap = true, silent = true })
 
 
 

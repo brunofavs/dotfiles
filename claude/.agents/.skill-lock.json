@@ -37,6 +37,15 @@
       "skillFolderHash": "86b09e0a4701ffc7d776e9aae4c538daa2c2d156",
       "installedAt": "2026-05-27T21:03:36.756Z",
       "updatedAt": "2026-05-27T21:03:36.756Z"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/blader/humanizer.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "1b48564898e999219882660237fde01bf4843a0f",
+      "installedAt": "2026-07-09T15:21:52.701Z",
+      "updatedAt": "2026-07-09T15:21:52.701Z"
     }
   },
   "dismissed": {

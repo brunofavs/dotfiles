@@ -1,0 +1,124 @@
+{
+  "proto": 1,
+  "supervisorPid": 56596,
+  "updatedAt": 1782843375315,
+  "workers": {
+    "6266454d": {
+      "pid": 45471,
+      "procStart": "10862139",
+      "sessionId": "6266454d-79d1-4db8-8522-2f771cf84ebf",
+      "rendezvousSock": "/tmp/cc-daemon-1000/a6599c5a/rv/6266454d.sock",
+      "ptySock": "/tmp/cc-daemon-1000/a6599c5a/pty/6266454d.sock",
+      "cliVersion": "2.1.195",
+      "startedAt": 1782839534581,
+      "attempt": 1,
+      "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+      "dispatch": {
+        "proto": 1,
+        "short": "6266454d",
+        "nonce": "df4817f3",
+        "sessionId": "6266454d-79d1-4db8-8522-2f771cf84ebf",
+        "createdAt": 1782839534347,
+        "source": "slash",
+        "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+        "launch": {
+          "mode": "resume",
+          "sessionId": "/home/bruno/.claude/projects/-home-bruno-ros2-workspaces-larcc-interface-jazzy/b69eb783-6fde-4046-a956-57e150938ab8.jsonl",
+          "fork": true,
+          "flagArgs": [
+            "--model",
+            "opus",
+            "--effort",
+            "xhigh",
+            "--permission-mode",
+            "default"
+          ]
+        },
+        "env": {
+          "CLAUDE_BG_ISOLATION": "none",
+          "CLAUDE_BG_SESSION_PERMISSION_RULES": "{\"allow\":[\"Read(//opt/ros/**)\",\"Read(//home/bruno/.ros/log/**)\"],\"deny\":[]}"
+        },
+        "isolation": "none",
+        "respawnFlags": [
+          "--model",
+          "opus",
+          "--effort",
+          "xhigh",
+          "--permission-mode",
+          "default"
+        ],
+        "seed": {
+          "intent": "[Request interrupted by user for tool use]",
+          "name": "Configure Robotiq gripper xacro parameters"
+        },
+        "cols": 195,
+        "rows": 52
+      },
+      "decModes": [
+        1000,
+        1002,
+        1003,
+        1006,
+        2004,
+        1004,
+        2031
+      ],
+      "rvAuth": "16bfaf70b702368c62e1cd904c652423",
+      "ptyAuth": "b903c3b82f1d69f65f1369281c2f8ea9"
+    },
+    "5aecd956": {
+      "pid": 56679,
+      "procStart": "11246175",
+      "sessionId": "5aecd956-e6e0-4488-8658-72eb1f59d2c5",
+      "rendezvousSock": "/tmp/cc-daemon-1000/a6599c5a/rv/5aecd956.sock",
+      "ptySock": "/tmp/cc-daemon-1000/a6599c5a/spare/a2c5cebd.pty.sock",
+      "cliVersion": "2.1.197",
+      "startedAt": 1782839725650,
+      "attempt": 2,
+      "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+      "dispatch": {
+        "proto": 1,
+        "short": "5aecd956",
+        "nonce": "6531c107",
+        "sessionId": "5aecd956-e6e0-4488-8658-72eb1f59d2c5",
+        "createdAt": 1782839725648,
+        "source": "fleet",
+        "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+        "launch": {
+          "mode": "prompt",
+          "args": [
+            "--session-id",
+            "5aecd956-e6e0-4488-8658-72eb1f59d2c5",
+            "--agent",
+            "claude",
+            "--",
+            "    <xacro:if value=\"${use_mock_hardware}\">\n      <xacro:property name=\"gripper_closed_position_value\" value=\"0.0\"/>\n    </xacro:if>\n    <xacro:unless value=\"${use_mock_hardware}\">\n      <xacro:property name=\"gripper_closed_position_value\" value=\"0.695\"/>\n    </xacro:unless>\n"
+          ]
+        },
+        "env": {},
+        "isolation": "none",
+        "respawnFlags": [
+          "--agent",
+          "claude"
+        ],
+        "agent": "claude",
+        "seed": {
+          "intent": "    <xacro:if value=\"${use_mock_hardware}\">\n      <xacro:property name=\"gripper_closed_position_value\" value=\"0.0\"/>\n    </xacro:if>\n    <xacro:unless value=\"${use_mock_hardware}\">\n      <xacro:property name=\"gripper_closed_position_value\" value=\"0.695\"/>\n    </xacro:unless>\n"
+        },
+        "cols": 195,
+        "rows": 52
+      },
+      "decModes": [
+        1000,
+        1002,
+        1003,
+        1006,
+        2004,
+        1004,
+        2031
+      ],
+      "rvAuth": "06c09aee63a18cffaf91b7a03bf15a66",
+      "ptyAuth": "8e64775df0a46a4a61d89cd196dc47ef"
+    }
+  }
+}

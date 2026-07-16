@@ -1,0 +1,39 @@
+{
+  "state": "done",
+  "detail": "explained silent default fallback behavior in config handling",
+  "tempo": "idle",
+  "inFlight": {
+    "tasks": 0,
+    "queued": 0,
+    "kinds": []
+  },
+  "tokens": 8027,
+  "output": {
+    "result": "silent default fallback is the root cause — no warning issued"
+  },
+  "children": null,
+  "linkScanOffset": 367790,
+  "linkScanPath": "/home/bruno/.claude/projects/-home-bruno-ros2-workspaces-larcc-interface-jazzy/28ceda90-c97c-4f63-90a4-d4adf37dbaf8.jsonl",
+  "template": "bg",
+  "respawnFlags": [
+    "--reply-on-resume",
+    "--effort",
+    "high",
+    "--permission-mode",
+    "default"
+  ],
+  "intent": "yeah check please",
+  "name": "Fix MoveIt parameter type mismatch for joint limits",
+  "nameSource": "auto",
+  "sessionId": "28ceda90-c97c-4f63-90a4-d4adf37dbaf8",
+  "resumeSessionId": "28ceda90-c97c-4f63-90a4-d4adf37dbaf8",
+  "daemonShort": "28ceda90",
+  "cliVersion": "2.1.191",
+  "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+  "bgIsolation": "none",
+  "providerEnv": {},
+  "backend": "daemon",
+  "createdAt": "2026-06-25T16:10:45.660Z",
+  "updatedAt": "2026-06-25T16:25:23.387Z",
+  "firstTerminalAt": "2026-06-25T16:16:28.413Z"
+}

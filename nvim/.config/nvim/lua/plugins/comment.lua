@@ -1,7 +1,15 @@
+-- return {
+--   "numToStr/Comment.nvim",
+--   lazy = false,
+--   config = function ()
+--     require('Comment').setup()
+--   end
+-- }
+
 return {
-  "numToStr/Comment.nvim",
+  "nvim-mini/mini.comment",
   lazy = false,
   config = function ()
-    require('Comment').setup()
+    require('mini.comment').setup()
   end
 }

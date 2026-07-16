@@ -1,0 +1,15 @@
+{
+  "pid": 56596,
+  "version": "2.1.197",
+  "jsonPath": "/home/bruno/.claude/daemon.json",
+  "logPath": "/home/bruno/.claude/daemon.log",
+  "startedAt": 1782843374809,
+  "origin": "transient",
+  "spawnedBy": {
+    "label": "claude",
+    "cwd": "/home/bruno/ros2_workspaces/larcc_interface_jazzy",
+    "pid": 3770
+  },
+  "procStart": "11246148",
+  "launchTarget": "/home/bruno/.local/share/claude/versions/2.1.197"
+}

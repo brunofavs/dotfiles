@@ -1,4 +1,9 @@
 {
+  "model": "sonnet",
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "xhigh",
   "theme": "auto",
   "preferredNotifChannel": "notifications_disabled"
 }

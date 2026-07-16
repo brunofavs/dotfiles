@@ -22,9 +22,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("swayosd-server")
 -- https://www.reddit.com/r/hyprland/comments/1fcpt30/comment/lnd9bkr/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
     hl.exec_cmd("nwg-look -a")
--- https://gist.github.com/brunoanc/2dea6ddf6974ba4e5d26c3139ffb7580
--- For xdg portal
-    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 -- Quickshell
     hl.exec_cmd("qs -c overview")
 end)
@@ -40,5 +37,22 @@ hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3")
 --for kde apps you need to install: sudo pacman -S qt5ct qt6ct kvantum kvantum breeze-icons
 --you will need to set dark theme for qt apps from kde more difficult thans with gnome :D:
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct") -- for Qt apps# Theme
+
+
+-- https://gist.github.com/brunoanc/2dea6ddf6974ba4e5d26c3139ffb7580
+-- For xdg portal
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+
+-- https://wiki.hypr.land/Useful-Utilities/Systemd-start/#hyprland-sessiontarget
+hl.on("hyprland.start", function()
+    hl.exec_cmd("systemctl --user start hyprland-session.target")
+end)
+
+hl.on("hyprland.shutdown", function()
+    os.execute("systemctl --user stop hyprland-session.target && sleep 0.1")
+    -- uses a blocking exec function and sleeps a bit to give things time to close
+    -- you might also want to kill troublesome/crashing non-systemd background services here:
+    -- os.execute("pkill wallpaperthing; systemctl --user stop hyprland-session.target && sleep 0.1")
+end)
 
 
